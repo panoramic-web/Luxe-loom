@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="">
+   <title>STYLEDOSE Shopping page</title>
+   <link rel="shortcut icon" type="image/x-icon" href="./icons/logo_dark.svg">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+   <link rel="stylesheet" href="./assets/fontawesome-free-6.4.0-web/css/all.min.css">
+   <link rel="stylesheet" href="./assets/css/shop.css">
+</head>
+
+<body>
+
+   <div class="preloader">
+      <div class="loader">
+         <h2>STYLEDOSE</h2>
+      </div>
+   </div>
+
+
+   <nav id="navbar">
+      <div class="left-section">
+         <button class="product-menu-toggler" id="menu-icon" type="button">
+            <span></span>
+            <span></span>
+         </button>
+         <a href="#" class="logo">STYLEDOSE</a>
+      </div>
+
+      <ul class="nav-menu">
+         <li class="nav-link"><a href="#">Women's section <i class="bi bi-chevron-right"></i></a></li>
+         <li class="nav-link"><a href="#">Men's section <i class="bi bi-chevron-right"></i></a></li>
+         <li class="nav-link"><a href="#">Kid's section <i class="bi bi-chevron-right"></i></a></li>
+      </ul>
+
+      <div class="right-section">
+
+         <div id="theme-toggler">
+            <div class="icons">
+               <i class="bi bi-sun"></i>
+               <i class="bi bi-moon"></i>
+            </div>
+
+            <input type="checkbox" name="theme-toggler" id="toggler">
+            <label class="knob" for="toggler"></label>
+         </div>
+
+         <a class="cart-icon" href="#"><i class="bi bi-bag"></i></a>
+      </div>
+   </nav>
+
+
+   <main id="main">
+      <section id="shop">
+         <div id="product-list" class="product-list">
+            <h3 class="title">Our products</h3>
+
+            <select name="product" id="product">
+               <option value="0" selected>T-shirts</option>
+               <option value="1">Jeans</option>
+            </select>
+
+            <div class="list">
+               <ul class="main-menu">
+                  <li class="main-menu-item">Clothing <i class="bi bi-chevron-right"></i>
+                     <ul class="sub-menu">
+                        <li><a href="#">T-shirts</a>
+                        <li><a href="#">Shirts</a>
+                        <li><a href="#">Denim shirts</a>
+                        <li><a href="#">Jackets</a>
+                        <li><a href="#">Jeans</a>
+                        <li><a href="#">Denim jeans</a>
+                     </ul>
+                  </li>
+
+                  <li class="main-menu-item">Accessories <i class="bi bi-chevron-right"></i>
+                     <ul id="sub-menu">
+                        <li><a href="#">Shoes</a></li>
+                        <li><a href="#">Caps</a></li>
+                        <li><a href="#">Watches</a></li>
+                        <li><a href="#">Bracelets</a></li>
+                        <li><a href="#">Necklaces</a></li>
+                        <li><a href="#">Men's earrings</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </div>
+
+         <div class="shop-header">
+            <div class="titlebar">
+               <h1 class="title">Shop</h1>
+               <p class="page-route"><a href="index.html">Home</a> <i class="bi bi-chevron-right"></i> <a href="#">Shop</a> <i class="bi bi-chevron-right"></i> <a href="#">Men's wear</a> <i class="bi bi-chevron-right"></i> T-shirts</p>
+            </div>
+
+            <div class="settings">
+               <h3 id="category-name"></h3>
+               <div class="buttons">
+                  <button type="button">Sort</button>
+                  <button type="button"><i class="bi bi-filter"></i></button>
+                  <div class="grid-list-buttons">
+                     <button class="g4x4" type="button"><i class="bi bi-grid-3x3-gap"></i></button>
+                     <button class="g2x2" type="button"><i class="bi bi-grid"></i></button>
+                     <button class="list list-button" type="button"><i class="bi bi-list-task"></i></button>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div id="showcase" class="grid-view"></div>
+      </section>
+   </main>
+
+   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+   <script src="https://kit.fontawesome.com/94a745351e.js" crossorigin="anonymous"></script>
+   <script src="./assets/package/swiper-bundle.min.js"></script>
+   <script src="./assets/js/gsap.min.js"></script>
+   <script src="./assets/js/TimelineLite.min.js"></script>
+   <script src="./assets/js/theme.js"></script>
+   <script src="./assets/js/shop.js"></script>
+
+</body>
+
+</html>

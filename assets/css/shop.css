@@ -4,6 +4,7 @@
 #main {
    width: 100%;
    background: var(--light);
+   background: #f8f8f8;
 }
 
 #shop {
@@ -34,7 +35,7 @@
 
 #shop .shop-header {
    width: 100%;
-   padding: 30px 8%;
+   padding: 30px 5%;
 
    .titlebar {
       align-items: center;
@@ -117,7 +118,7 @@
 #shop #showcase {
    width: 100%;
    height: max-content;
-   padding: 0 8%;
+   padding: 0 5%;
 }
 
 

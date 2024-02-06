@@ -1,170 +1,157 @@
-var navbar = document.querySelector('.navbar'),
-   menu = document.querySelector('.nav-menu'),
-   nav_links = document.querySelector('.nav-links'),
-   menu_icon = document.querySelector('#menu-icon'),
-   search_box = document.querySelector('#search-box');
-
-//___Open navbar
-
-menu_icon.onclick = () => {
-   menu.classList.toggle('active');
+//___Currency
+currency_selector.oninput = function() {
+   localStorage.setItem('curr', this.value);
+   load_products();
 }
 
-menu.onclick = () => {
-   menu.classList.toggle('active');
+fx.base = "USD";
+fx.rates = {
+   "EUR": 0.745101, // eg. 1 USD === 0.745101 EUR
+   "LKR": 312.083057,
+   "USD": 1, // always include the base rate (1:1)
+   /* etc */
 }
 
-// nav_links.onclick = (event) => {
-//    event.stopPropagation();
+load_products = () => {
+   var product = product_select.value;
+   category_name.innerText = products[product][0].category_name;
+   grid.innerHTML = '';
+   currency = localStorage.getItem('curr');
+
+   for (var i = 1; i < products[product].length; i++) {
+      var product_card = document.createElement('div');
+      var price = fx.convert(products[product][i].product_price, { from: 'LKR', to: currency });
+      var price = price.toFixed(2);
+      price = currency + " " + price;
+
+      product_card.innerHTML = `<div class="card item">
+                                        <a onclick="checkout(this)" class="card_inner" href="checkout.html">
+                                           <div class="card_top">
+                                              <img class="img" src="${products[product][i].product_image}" alt="${products[product][i].product_name}">
+                                           </div>
+
+                                           <div class="details">
+                                              <p class="name">${products[product][i].product_name}</p>
+                                              <p class="code" data-code="${products[product][i].product_code}">Code - ${products[product][i].product_code}</p>
+                                              <p class="description">${products[product][i].product_description}</p>
+                                              <p class="price">${price}</p>
+                                              <div class="ratings">
+                                              <i class="bi bi-star-fill"></i>
+                                              <i class="bi bi-star-fill"></i>
+                                              <i class="bi bi-star-fill"></i>
+                                              <i class="bi bi-star"></i>
+                                              <i class="bi bi-star"></i>
+                                              </div>
+                                           </div>
+                                        </a>
+                                     </div>`
+      grid.appendChild(product_card);
+   }
+};
+
+load_products();
+
+product_select.oninput = () => {
+   load_products();
+};
+
+function checkout(card) {
+   var c = card.querySelector('.code').getAttribute('data-code');
+   localStorage.setItem('code', c);
+}
+
+
+
+
+
+
+grid.onscroll = () => {
+   var titlebar = document.querySelector('#shop .titlebar');
+   titlebar.style.display = 'flex';
+}
+
+
+
+//___Products arrangement logic
+
+var grid_list = () => {
+   if (innerWidth > 1000) {
+      grid.classList.remove('g2', 'list')
+      grid.classList.add('g4')
+      g_4x4.style.color = 'var(--primary)'
+      g_2x2.style.color = 'var(--secondary)'
+      list.style.color = 'var(--secondary)'
+   }
+
+   else if (innerWidth < 700) {
+      grid.classList.remove('g4', 'list')
+      grid.classList.add('g2')
+      g_2x2.style.color = 'var(--primary)'
+      g_4x4.style.color = 'var(--secondary)'
+      list.style.color = 'var(--secondary)'
+   }
+
+   else if (innerWidth < 400) {
+      grid.classList.remove('g4', 'g2')
+      grid.classList.add('list')
+      list.style.color = 'var(--primary)'
+      g_4x4.style.color = 'var(--secondary)'
+      g_2x2.style.color = 'var(--secondary)'
+   }
+};
+
+
+
+g_4x4.onclick = () => {
+   grid.classList.remove('g2', 'list')
+   grid.classList.add('g4')
+   g_4x4.style.color = 'var(--primary)'
+   g_2x2.style.color = 'var(--secondary)'
+   list.style.color = 'var(--secondary)'
+};
+
+g_2x2.onclick = () => {
+   grid.classList.remove('g4', 'list')
+   grid.classList.add('g2')
+   g_2x2.style.color = 'var(--primary)'
+   g_4x4.style.color = 'var(--secondary)'
+   list.style.color = 'var(--secondary)'
+};
+
+list.onclick = () => {
+   grid.classList.remove('g4', 'g2')
+   grid.classList.add('list')
+   list.style.color = 'var(--primary)'
+   g_4x4.style.color = 'var(--secondary)'
+   g_2x2.style.color = 'var(--secondary)'
+};
+
+grid_list();
+
+onresize = () => {
+   grid_list();
+}
+
+
+
+
+
+
+// getText("products.json");
+
+// async function getText(file) {
+//    let x = await fetch(file);
+//    let y = await x.text();
+//    console.log(y);
 // }
 
-// search_box.onclick = (event) => {
-//    event.stopPropagation();
-// }
 
+// const xmlhttp = new XMLHttpRequest();
 
+// xmlhttp.onload = function() {
+//    const myObj = JSON.parse(this.responseText);
+//    console.log(myObj[0]);
+// };
 
-const swiper = new Swiper('.swiper', {
-   // Optional parameters
-   direction: 'vertical',
-   loop: true,
-   autoplay: true,
-
-   // If we need pagination
-   // pagination: {
-   //    el: '.swiper-pagination',
-   // },
-
-   // Navigation arrows
-   // navigation: {
-   //    nextEl: '.swiper-button-next',
-   //    prevEl: '.swiper-button-prev',
-   // },
-
-   // And if we need scrollbar
-   // scrollbar: {
-   //    el: '.swiper-scrollbar',
-   // },
-});
-
-
-
-
-const new_arrivals = new Swiper('.seasonal-offers-slider', {
-   // Optional parameters
-   direction: 'horizontal',
-   loop: true,
-   autoplay: true,
-   speed: 1000,
-
-   // Responsive breakpoints
-   breakpoints: {
-      // when window width is >= 100px
-      100: {
-         slidesPerView: 1,
-         spaceBetween: 5
-      },
-      // when window width is >= 320px
-      320: {
-         slidesPerView: 2,
-         spaceBetween: 10
-      },
-      // when window width is >= 480px
-      580: {
-         slidesPerView: 3,
-         spaceBetween: 15
-      },
-      // when window width is >= 640px
-      640: {
-         slidesPerView: 4,
-         spaceBetween: 20
-      },
-      // when window width is >= 880px
-      880: {
-         slidesPerView: 5,
-         spaceBetween: 25
-      },
-      // when window width is >= 1000px
-      1000: {
-         slidesPerView: 6,
-         spaceBetween: 30
-      },
-   },
-
-   // Navigation arrows
-   // navigation: {
-   //    nextEl: '.product-next',
-   //    prevEl: '.product-prev',
-   // },
-
-   // If we need pagination
-   // pagination: {
-   //    el: '.swiper-pagination',
-   // },
-
-   // And if we need scrollbar
-   // scrollbar: {
-   //    el: '.swiper-scrollbar',
-   // },
-});
-
-
-
-
-const for_you_slider = new Swiper('.for-you-slider', {
-   // Optional parameters
-   direction: 'horizontal',
-   loop: true,
-   autoplay: true,
-   speed: 1000,
-
-   // Responsive breakpoints
-   breakpoints: {
-      // when window width is >= 100px
-      100: {
-         slidesPerView: 1,
-         spaceBetween: 5
-      },
-      // when window width is >= 320px
-      320: {
-         slidesPerView: 2,
-         spaceBetween: 10
-      },
-      // when window width is >= 480px
-      580: {
-         slidesPerView: 3,
-         spaceBetween: 15
-      },
-      // when window width is >= 640px
-      640: {
-         slidesPerView: 4,
-         spaceBetween: 20
-      },
-      // when window width is >= 880px
-      880: {
-         slidesPerView: 5,
-         spaceBetween: 25
-      },
-      // when window width is >= 1000px
-      1000: {
-         slidesPerView: 6,
-         spaceBetween: 30
-      },
-   },
-
-   // Navigation arrows
-   // navigation: {
-   //    nextEl: '.product-next',
-   //    prevEl: '.product-prev',
-   // },
-
-   // If we need pagination
-   // pagination: {
-   //    el: '.swiper-pagination',
-   // },
-
-   // And if we need scrollbar
-   // scrollbar: {
-   //    el: '.swiper-scrollbar',
-   // },
-});
+// xmlhttp.open("GET", "products.json");
+// xmlhttp.send();

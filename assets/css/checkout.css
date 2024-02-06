@@ -1,0 +1,7 @@
+@import url('./initial-settings.css');
+@import url('./footer.css');
+
+#main {
+   width: 100%;
+   overflow-x: hidden;
+}

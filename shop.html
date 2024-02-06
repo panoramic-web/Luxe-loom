@@ -25,77 +25,102 @@
 
 
    <nav id="navbar">
-      <div class="left-section">
-         <button class="product-menu-toggler" id="menu-icon" type="button">
-            <span></span>
-            <span></span>
-         </button>
-         <a href="#" class="logo">STYLEDOSE</a>
+      <div class="topbar">
+         <p>Shop and upgrade your look</p>
       </div>
-
-      <ul class="nav-menu">
-         <li class="nav-link"><a href="#">Women's section <i class="bi bi-chevron-right"></i></a></li>
-         <li class="nav-link"><a href="#">Men's section <i class="bi bi-chevron-right"></i></a></li>
-         <li class="nav-link"><a href="#">Kid's section <i class="bi bi-chevron-right"></i></a></li>
-      </ul>
-
-      <div class="right-section">
-
-         <div id="theme-toggler">
-            <div class="icons">
-               <i class="bi bi-sun"></i>
-               <i class="bi bi-moon"></i>
-            </div>
-
-            <input type="checkbox" name="theme-toggler" id="toggler">
-            <label class="knob" for="toggler"></label>
+      <div class="bottombar">
+         <div class="left-section">
+            <button id="product-menu-icon" type="button">
+               <span></span>
+               <span></span>
+            </button>
+            <a href="./index.html" class="logo">STYLEDOSE</a>
          </div>
 
-         <a class="cart-icon" href="#"><i class="bi bi-bag"></i></a>
+         <div id="menu" class="menu">
+            <ul class="list">
+               <li class="item"><a href="#">Women's section <i class="bi bi-chevron-right"></i></a></li>
+               <li class="item"><a href="#">Men's section <i class="bi bi-chevron-right"></i></a></li>
+               <li class="item"><a href="#">Kid's section <i class="bi bi-chevron-right"></i></a></li>
+            </ul>
+         </div>
+
+         <div class="right-section">
+            <select name="" id="currency-selector">
+               <option value="LKR" selected>LKR</option>
+               <option value="USD">USD</option>
+            </select>
+
+            <div id="theme-toggler">
+               <div class="icons">
+                  <i class="bi bi-sun"></i>
+                  <i class="bi bi-moon"></i>
+               </div>
+
+               <input type="checkbox" name="theme-toggler" id="toggler">
+               <label class="knob" for="toggler"></label>
+            </div>
+
+            &nbsp;
+            <hr>
+            &nbsp;
+
+            <ul class="social-media-links">
+               <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+               <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+               <li><a href="#"><i class="bi bi-twitter-x"></i></a></li>
+            </ul>
+            &nbsp;
+            <hr>
+            &nbsp;
+            <a class="cart-icon" href="#"><i class="bi bi-bag"></i></a>
+         </div>
+      </div>
+
+
+
+      <div id="product-list" class="product-list">
+         <h3 class="title">Our products</h3>
+
+         <select name="product" id="product">
+            <option value="0" selected>T-shirts</option>
+            <option value="1">Jeans</option>
+         </select>
+
+         <div class="list">
+            <ul class="main-menu">
+               <li class="main-menu-item">Clothing <i class="bi bi-chevron-right"></i>
+                  <ul class="sub-menu">
+                     <li><a href="#">T-shirts</a>
+                     <li><a href="#">Shirts</a>
+                     <li><a href="#">Denim shirts</a>
+                     <li><a href="#">Jackets</a>
+                     <li><a href="#">Jeans</a>
+                     <li><a href="#">Denim jeans</a>
+                  </ul>
+               </li>
+
+               <li class="main-menu-item">Accessories <i class="bi bi-chevron-right"></i>
+                  <ul class="sub-menu">
+                     <li><a href="#">Shoes</a></li>
+                     <li><a href="#">Caps</a></li>
+                     <li><a href="#">Watches</a></li>
+                     <li><a href="#">Bracelets</a></li>
+                     <li><a href="#">Necklaces</a></li>
+                     <li><a href="#">Men's earrings</a></li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
       </div>
    </nav>
 
 
    <main id="main">
       <section id="shop">
-         <div id="product-list" class="product-list">
-            <h3 class="title">Our products</h3>
-
-            <select name="product" id="product">
-               <option value="0" selected>T-shirts</option>
-               <option value="1">Jeans</option>
-            </select>
-
-            <div class="list">
-               <ul class="main-menu">
-                  <li class="main-menu-item">Clothing <i class="bi bi-chevron-right"></i>
-                     <ul class="sub-menu">
-                        <li><a href="#">T-shirts</a>
-                        <li><a href="#">Shirts</a>
-                        <li><a href="#">Denim shirts</a>
-                        <li><a href="#">Jackets</a>
-                        <li><a href="#">Jeans</a>
-                        <li><a href="#">Denim jeans</a>
-                     </ul>
-                  </li>
-
-                  <li class="main-menu-item">Accessories <i class="bi bi-chevron-right"></i>
-                     <ul id="sub-menu">
-                        <li><a href="#">Shoes</a></li>
-                        <li><a href="#">Caps</a></li>
-                        <li><a href="#">Watches</a></li>
-                        <li><a href="#">Bracelets</a></li>
-                        <li><a href="#">Necklaces</a></li>
-                        <li><a href="#">Men's earrings</a></li>
-                     </ul>
-                  </li>
-               </ul>
-            </div>
-         </div>
-
          <div class="shop-header">
             <div class="titlebar">
-               <h1 class="title">Shop</h1>
+               <h1 class="title">Collection</h1>
                <p class="page-route"><a href="index.html">Home</a> <i class="bi bi-chevron-right"></i> <a href="#">Shop</a> <i class="bi bi-chevron-right"></i> <a href="#">Men's wear</a> <i class="bi bi-chevron-right"></i> T-shirts</p>
             </div>
 
@@ -116,13 +141,17 @@
          <div id="showcase" class="grid-view"></div>
       </section>
    </main>
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+   <script src="./assets/js/money.js"></script>
+   <script src="./assets/js/money.min.js"></script>
 
    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
    <script src="https://kit.fontawesome.com/94a745351e.js" crossorigin="anonymous"></script>
    <script src="./assets/package/swiper-bundle.min.js"></script>
    <script src="./assets/js/gsap.min.js"></script>
    <script src="./assets/js/TimelineLite.min.js"></script>
-   <script src="./assets/js/theme.js"></script>
+   <script src="./assets/js/product_list.js"></script>
+   <script src="./assets/js/common-settings.js"></script>
    <script src="./assets/js/shop.js"></script>
 
 </body>

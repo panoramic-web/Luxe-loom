@@ -45,8 +45,9 @@
    .carousel_2 .swiper-slide .info h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
-      text-transform: capitalize;
+      text-transform: uppercase;
       color: var(--dark);
+
    }
 
    .carousel_2 .swiper-slide .info p {
@@ -62,6 +63,9 @@
       padding: 10px 20px;
       border-radius: 4px;
       background: var(--dark);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-family: 'Squada One', sans-serif;
    }
 }
 
@@ -76,7 +80,7 @@
 }
 
 #main .seasonal-offers {
-   padding: 50px 5%;
+   padding: 50px 6%;
    padding-bottom: 0;
 }
 
@@ -118,10 +122,44 @@
 
 
 
+#catalog {
+   width: 100%;
+   padding: 30px 10%;
+   margin: 0 auto;
+}
+
+#catalog .grid {
+   overflow: hidden;
+   display: grid;
+   gap: 10px;
+   grid-template-rows: 130px 150px 130px;
+   grid-template-areas: "item1 item4 item4" "item2 item4 item4" "item3 item4 item4";
+}
+
+#catalog .grid .item_1 {
+   grid-area: item1;
+}
+
+#catalog .grid .item_2 {
+   grid-area: item2;
+}
+
+#catalog .grid .item_3 {
+   grid-area: item3;
+}
+
+#catalog .grid .item_4 {
+   grid-area: item4;
+}
+
+#catalog .grid div img {
+   width: 100%;
+}
+
 
 
 #main #new-arrivals {
-   padding: 50px 5%;
+   padding: 50px 6%;
 }
 
 #main #new-arrivals .title {
@@ -167,11 +205,13 @@
 
 #services {
    width: 100%;
+   max-width: 900px;
+   margin: 0 auto;
    height: max-content;
    display: flex;
    align-items: center;
    justify-content: center;
-   padding: 50px 5%;
+   padding: 50px 6%;
 }
 
 #services .grid {
@@ -222,7 +262,7 @@
 }
 
 #services .grid_item_2 {
-   background: url('../items/jackets/f002cbcf570c381850f76fabc34242e4.jpg') no-repeat top / cover;
+   background: url('../items/t shirts/2018-Fashion-Men-T-shirt-Slim-Fit-Custom-T-shirt-Crease-Design-Long-Stylish-Luxury__33850.1523708593.jpg') no-repeat top / cover;
    grid-area: two;
 }
 
@@ -232,7 +272,7 @@
 }
 
 #services .grid_item_4 {
-   background: url('../items/jackets/529074045_max.jpg') no-repeat top / cover;
+   background: url('../items/jeans/15886958_1.jpeg') no-repeat top / cover;
    grid-area: four;
 }
 
@@ -277,7 +317,6 @@
 
 @media (max-width: 600px) {
    #services {
-      padding: 0 5%;
       flex-direction: column;
    }
 
@@ -297,7 +336,7 @@
 .newsletter-section {
    width: 100%;
    height: max-content;
-   padding: 50px 5%;
+   padding: 50px 6%;
    display: flex;
    align-items: center;
 }

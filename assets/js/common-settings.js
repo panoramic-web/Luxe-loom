@@ -6,45 +6,31 @@ var preloader = document.querySelector('.preloader'),
    product_select = document.querySelector('#product'),
    currency_selector = document.querySelector('#currency-selector'),
    currency = currency_selector.value,
-   category_name = document.querySelector('#category-name'),
+
    items = document.querySelectorAll('.item'),
    grid = document.querySelector('#showcase'),
-   g_4x4 = document.querySelector('.g4x4'),
+   g_3x3 = document.querySelector('.g3x3'),
    g_2x2 = document.querySelector('.g2x2'),
    list = document.querySelector('.list-button'),
+
    swiper_wrapper = document.querySelector('.swiper-wrapper'),
+
    menu = document.querySelector('#menu'),
    nav_links = document.querySelectorAll('#menu .list .item');
 
-var dark_theme_css = document.createElement('link');
-dark_theme_css.rel = 'stylesheet';
-dark_theme_css.href = './assets/css/dark_theme.css';
 
-product_menu_icon.onclick = function() {
-   product_list.classList.toggle('active');
-}
 
-/*
-
-// Close the product list if the user clicks outside of it
-
-onclick = function(e) {
-   if (!e.target.matches('.product-list')) {
-      if (product_list.classList.contains('active')) {
-         product_list.classList.remove('active');
-      }
-   }
-}
-
-*/
+// Window.onload function
 
 onload = () => {
-   //___Preloader animation
+   // Preloader
+
    setTimeout(() => {
       preloader.style.display = 'none';
    }, 500);
 
-   //___Theme
+   // Theme
+
    if (!(localStorage.getItem('theme'))) {
       theme = localStorage.setItem('theme', 'light');
    }
@@ -52,7 +38,8 @@ onload = () => {
       document.head.appendChild(dark_theme_css);
    }
 
-   //___Currency
+   // Currency
+
    if (!(localStorage.getItem('curr'))) {
       localStorage.setItem('curr', currency);
    }
@@ -60,13 +47,18 @@ onload = () => {
 };
 
 
-//___Site theme
+// Site theme
+
+var dark_theme_css = document.createElement('link');
+dark_theme_css.rel = 'stylesheet';
+dark_theme_css.href = './assets/css/dark_theme.css';
+
 theme_toggler.oninput = () => {
    if (localStorage.getItem('theme') == 'light') {
       document.head.appendChild(dark_theme_css);
       localStorage.setItem('theme', 'dark');
    }
-   else if (localStorage.getItem('theme') == 'dark') {
+   else {
       document.head.lastChild.remove();
       localStorage.setItem('theme', 'light');
    }
@@ -74,19 +66,44 @@ theme_toggler.oninput = () => {
 
 
 
+// Product menu list
 
-/*
-onclick = function(e) {
-   if (!e.target.matches('.menu')) {
-      if (menu.classList.contains('active')) {
-         menu.classList.remove('active');
-      }
-   }
+product_menu_icon.onclick = () => {
+   product_list.classList.toggle('active');
+};
+
+product_list.onclick = function() {
+   this.classList.remove('active');
 }
 
-nav_links.forEach(link => {
-   link.onclick = (event) => {
-      event.stopPropagation();
-   }
-})
-*/
+product_list.querySelector('.menu').onclick = (event) => {
+   event.stopPropagation();
+};
+
+
+
+
+
+// Closes the product list if the user clicks outside of it.
+
+// onclick = function(e) {
+//    if (!e.target.matches('.product-list')) {
+//       if (product_list.classList.contains('active')) {
+//          product_list.classList.remove('active');
+//       }
+//    }
+// }
+
+// onclick = function(e) {
+//    if (!e.target.matches('.menu')) {
+//       if (menu.classList.contains('active')) {
+//          menu.classList.remove('active');
+//       }
+//    }
+// }
+
+// nav_links.forEach(link => {
+//    link.onclick = (event) => {
+//       event.stopPropagation();
+//    }
+// })

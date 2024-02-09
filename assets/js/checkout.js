@@ -1,6 +1,7 @@
 var container = document.querySelector('.container');
 
-//___Currency
+// Currency
+
 currency_selector.oninput = function() {
    localStorage.setItem('curr', this.value);
    load_item();
@@ -9,38 +10,46 @@ currency_selector.oninput = function() {
 fx.base = "USD";
 fx.rates = {
    "EUR": 0.745101, // eg. 1 USD === 0.745101 EUR
-   "GBP": 0.647710, // etc...
+   "GBP": 0.647710,
    "HKD": 7.781919,
    "LKR": 312.083057,
    "USD": 1, // always include the base rate (1:1)
-   /* etc */
 }
 
 load_item = () => {
    // var product = product_select.value;
    // category_name.innerText = products[product][0].category_name;
-   var code = localStorage.getItem('code');
-   var ppppp = 0;
+   var code = localStorage.getItem('item_code');
+   var category = 0;
    container.innerHTML = '';
    currency = localStorage.getItem('curr');
 
-   for (var i = 1; i < products[ppppp].length; i++) {
-      if (products[ppppp][i].product_code == code) {
+   for (var i = 1; i < products[category].length; i++) {
+      if (products[category][i].product_code == code) {
          var product_card = document.createElement('div');
-         var price = fx.convert(products[ppppp][i].product_price, { from: 'LKR', to: currency });
-         var price = price.toFixed(2);
-         price = currency + " " + price;
+         var price = fx.convert(products[category][i].product_price, { from: 'LKR', to: currency });
+         if (currency == 'USD') {
+            price = "US$ " + price.toFixed(2);
+         }
+         else {
+            price = "LKR " + price.toFixed(2);
+         }
 
-         product_card.innerHTML = `<div class="">
-                                        <a class="" href="#">
-                                           <div class="card_top">
-                                              <img class="" src="${products[ppppp][i].product_image}" alt="${products[ppppp][i].product_name}">
+         var preview_image = document.querySelector('.chechout_product .image');
+         preview_image.src = products[category][i].product_image;
+         preview_image.alt = products[category][i].product_name;
+
+
+         product_card.innerHTML = `<div class="card">
+                                        <a class="card_inner" href="#">
+                                           <div class="left">
+                                              <img class="" src="${products[category][i].product_image}" alt="${products[category][i].product_name}">
                                            </div>
 
-                                           <div class="">
-                                              <p class="">${products[ppppp][i].product_name}</p>
-                                              <p class="">Code - ${products[ppppp][i].product_code}</p>
-                                              <p class="">${products[ppppp][i].product_description}</p>
+                                           <div class="right">
+                                              <p class="">${products[category][i].product_name}</p>
+                                              <p class="">Item code: ${products[category][i].product_code}</p>
+                                              <p class="">${products[category][i].product_description}</p>
                                               <p class="">${price}</p>
                                               <div class="">
                                               <i class="bi bi-star-fill"></i>

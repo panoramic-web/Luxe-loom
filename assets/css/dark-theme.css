@@ -1,8 +1,8 @@
 :root {
    --primary: #003459;
    --secondary: #2497DC;
-   --light: #111;
-   --dark: #ccc;
+   --light: #000;
+   --dark: #fff;
 }
 
 #shop .products .grid .card:hover,

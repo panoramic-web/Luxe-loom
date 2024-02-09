@@ -3,39 +3,21 @@
 
 #main {
    width: 100%;
+   height: max-content;
    background: var(--light);
-   background: #f8f8f8;
+   transition: background .3s;
 }
 
 #shop {
    width: 100%;
    max-width: 1000px;
-   height: 100vh;
+   height: max-content;
    margin: 0 auto;
 }
 
-
-#shop #product-list {
-   position: fixed;
-   top: 0;
-   left: -100%;
-   width: 50%;
-   height: 100vh;
-   overflow-y: scroll;
-   background: var(--light);
-   transition: .3s;
-}
-
-#shop #product-list.active {
-   left: 0;
-}
-
-
-
-
 #shop .shop-header {
    width: 100%;
-   padding: 30px 5%;
+   padding: 50px 6% 0 6%;
 
    .titlebar {
       align-items: center;
@@ -54,7 +36,8 @@
       }
 
       .page-route a {
-         font-weight: 400;
+         color: var(--grey);
+         font-weight: normal;
       }
    }
 }
@@ -82,6 +65,8 @@
       background: var(--dark);
    }
 
+
+
    .buttons {
       display: flex;
       align-items: center;
@@ -90,9 +75,9 @@
 
    .buttons button {
       padding: 5px 10px;
-      margin-left: 5px;
-      background: none;
-      border: 1px solid #ddd;
+      margin-left: 10px;
+      background: var(--light);
+      border: 1px solid var(--grey);
       font-size: 1rem;
       border-radius: 3px;
    }
@@ -109,6 +94,34 @@
 
 
 
+#filter-window {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transform: scale(0);
+   transition: .3s;
+   z-index: 1000;
+}
+
+#filter-window.active {
+   transform: scale(1);
+}
+
+#filter-window .window {
+   width: 90%;
+   height: 90vh;
+   overflow-y: scroll;
+   background: var(--light);
+   border-radius: 10px;
+   background: #F4F7FF;
+   border: 1px solid var(--grey);
+   padding: 30px;
+}
 
 
 
@@ -118,16 +131,17 @@
 #shop #showcase {
    width: 100%;
    height: max-content;
-   padding: 0 5%;
+   padding: 30px 6%;
 }
 
-
-/* shop grid view start */
-
-#shop .grid-view,
-#shop .g4 {
+#shop .grid-view {
    display: grid;
    grid-template: auto / repeat(4, 1fr);
+   gap: 2rem;
+}
+
+#shop .g3 {
+   grid-template: auto / repeat(3, 1fr);
    gap: 2rem;
 }
 
@@ -139,20 +153,18 @@
 
 
 
-
+/* Shop grid view */
 
 #shop #showcase.grid-view {
    .card {
-      -webkit-transition-duration: .3s;
-      -moz-transition-duration: .3s;
-      -ms-transition-duration: .3s;
-      -o-transition-duration: .3s;
-      transition-duration: .3s;
+      color: var(--grey);
       overflow: hidden;
-      color: var(--dark);
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      overflow: hidden;
+      background: var(--light);
+      -webkit-transition: .3s;
+      -moz-transition: .3s;
+      -ms-transition: .3s;
+      -o-transition: .3s;
+      transition: .3s;
    }
 
    .card .card_top {
@@ -164,46 +176,48 @@
    }
 
    .card .details {
-      text-align: center;
-      padding: 10px;
+      padding: 10px 0;
    }
 
    .card .details .name {
       margin-bottom: .3rem;
       font-size: .8rem;
-      font-weight: bold;
+      font-weight: 500;
+   }
+
+   .card .details .code {
+      font-size: .6rem;
+      text-transform: uppercase;
+      color: var(--grey);
    }
 
    .card .details .description {
       margin-bottom: .5rem;
       font-size: .6rem;
+      color: var(--grey);
    }
 
    .card .details .price {
-      font-weight: bold;
+      padding-bottom: 10px;
       margin-bottom: .5rem;
       font-size: .8rem;
-   }
-
-   .card:hover {
-      box-shadow: 2px 2px 3px #eee;
+      border-bottom: 1px solid var(--grey);
    }
 
    .card .details .ratings i {
       font-size: .8rem;
+      color: var(--grey);
    }
 
    .card .details .ratings i:nth-child(1),
    .card .details .ratings i:nth-child(2),
    .card .details .ratings i:nth-child(3) {
-      color: gold;
+      color: var(--dark);
    }
 }
 
 
-
-
-/* shop list view start */
+/* shop list view */
 
 #shop #showcase.list {
    display: grid;
@@ -212,13 +226,14 @@
    align-items: start;
 
    .card {
-      width: 100%;
-      -webkit-transition-duration: .3s;
-      -moz-transition-duration: .3s;
-      -ms-transition-duration: .3s;
-      -o-transition-duration: .3s;
-      transition-duration: .3s;
+      color: var(--grey);
       overflow: hidden;
+      background: var(--light);
+      -webkit-transition: .3s;
+      -moz-transition: .3s;
+      -ms-transition: .3s;
+      -o-transition: .3s;
+      transition: .3s;
    }
 
    .card .card_inner {
@@ -236,31 +251,45 @@
 
    .card .details {
       width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-      color: var(--dark);
+      padding-left: 20px;
    }
 
    .card .details .name {
-      margin-bottom: .5rem;
+      margin-bottom: .3rem;
       font-size: .8rem;
+      font-weight: 500;
+   }
+
+   .card .details .code {
+      font-size: .6rem;
+      text-transform: uppercase;
+      color: var(--grey);
+   }
+
+   .card .details .description {
+      margin-bottom: .5rem;
+      font-size: .6rem;
+      color: var(--grey);
    }
 
    .card .details .price {
-      font-weight: bold;
+      padding-bottom: 10px;
+      margin-bottom: .5rem;
       font-size: .8rem;
+      border-bottom: 1px solid var(--grey);
    }
 
-   .card:hover {
-      box-shadow: 2px 2px 3px #eee;
+   .card .details .ratings i {
+      font-size: .8rem;
+      color: var(--grey);
+   }
+
+   .card .details .ratings i:nth-child(1),
+   .card .details .ratings i:nth-child(2),
+   .card .details .ratings i:nth-child(3) {
+      color: var(--dark);
    }
 }
-
-
-
 
 
 
@@ -268,11 +297,10 @@
 
 
 @media only screen and (max-width: 1200px) {
-   #shop .g4 {
-      gap: 1.5rem;
+   #shop .g3 {
+      gap: 2rem;
    }
 }
-
 
 @media only screen and (max-width: 1000px) and (min-width: 400px) {
    #shop .settings .grid-list-buttons .list {
@@ -280,14 +308,13 @@
    }
 }
 
-
 @media only screen and (max-width: 700px) {
    #shop .settings .grid-list-buttons {
       display: flex;
    }
 
-   #shop .settings .grid-list-buttons .g4x4 {
-      display: none;
+   #shop .settings .grid-list-buttons .g3x3 {
+      /* display: none; */
    }
 
    #shop .settings .grid-list-buttons .list {
@@ -299,9 +326,8 @@
    }
 }
 
-
 @media only screen and (max-width: 400px) {
-   #shop .grid-view .card .details {
-      padding: .5rem;
+   #shop .g3 {
+      gap: 1rem;
    }
 }

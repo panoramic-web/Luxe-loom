@@ -2,7 +2,8 @@ var preloader = document.querySelector('.preloader'),
    theme_toggler = document.querySelector('#theme-toggler'),
    theme,
    product_menu_icon = document.querySelector('#product-menu-icon'),
-   product_list = document.querySelector('#product-list'),
+   sidebar = document.querySelector('#sidebar'),
+   dropdown_items = document.querySelectorAll('.item-name'),
    product_select = document.querySelector('#product'),
    currency_selector = document.querySelector('#currency-selector'),
    currency = currency_selector.value,
@@ -19,6 +20,17 @@ var preloader = document.querySelector('.preloader'),
    nav_links = document.querySelectorAll('#menu .list .item');
 
 
+dropdown_items.forEach(item => {
+   item.onclick = function() {
+      
+      this.querySelector('i').classList.toggle('bi-plus');
+      this.querySelector('i').classList.toggle('bi-dash');
+      this.parentNode.querySelector('ul').classList.toggle('active');
+   }
+})
+
+
+
 
 // Window.onload function
 
@@ -32,10 +44,12 @@ onload = () => {
    // Theme
 
    if (!(localStorage.getItem('theme'))) {
-      theme = localStorage.setItem('theme', 'light');
+      theme = localStorage.setItem('theme', 'light')
+      toggle_func();
    }
    else if (localStorage.getItem('theme') == 'dark') {
       document.head.appendChild(dark_theme_css);
+      toggle_func();
    }
 
    // Currency
@@ -49,18 +63,25 @@ onload = () => {
 
 // Site theme
 
+var toggle_func = () => {
+   theme_toggler.querySelector('i').classList.toggle('bi-sun');
+   theme_toggler.querySelector('i').classList.toggle('bi-moon');
+}
+
 var dark_theme_css = document.createElement('link');
 dark_theme_css.rel = 'stylesheet';
 dark_theme_css.href = './assets/css/dark_theme.css';
 
-theme_toggler.oninput = () => {
+theme_toggler.onclick = function() {
    if (localStorage.getItem('theme') == 'light') {
       document.head.appendChild(dark_theme_css);
       localStorage.setItem('theme', 'dark');
+      toggle_func();
    }
    else {
       document.head.lastChild.remove();
       localStorage.setItem('theme', 'light');
+      toggle_func();
    }
 };
 
@@ -69,14 +90,14 @@ theme_toggler.oninput = () => {
 // Product menu list
 
 product_menu_icon.onclick = () => {
-   product_list.classList.toggle('active');
+   sidebar.classList.toggle('active');
 };
 
-product_list.onclick = function() {
+sidebar.onclick = function() {
    this.classList.remove('active');
 }
 
-product_list.querySelector('.menu').onclick = (event) => {
+sidebar.querySelector('.menu').onclick = (event) => {
    event.stopPropagation();
 };
 
@@ -87,9 +108,9 @@ product_list.querySelector('.menu').onclick = (event) => {
 // Closes the product list if the user clicks outside of it.
 
 // onclick = function(e) {
-//    if (!e.target.matches('.product-list')) {
-//       if (product_list.classList.contains('active')) {
-//          product_list.classList.remove('active');
+//    if (!e.target.matches('.sidebar')) {
+//       if (sidebar.classList.contains('active')) {
+//          sidebar.classList.remove('active');
 //       }
 //    }
 // }

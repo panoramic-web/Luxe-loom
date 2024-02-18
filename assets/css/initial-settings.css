@@ -79,7 +79,8 @@ select {
    cursor: pointer;
 }
 
-p {
+p,
+a {
    font-size: 1rem;
 }
 

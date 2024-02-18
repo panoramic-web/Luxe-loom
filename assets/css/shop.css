@@ -24,15 +24,10 @@
       transition: .3s;
       margin-bottom: 30px;
 
-      .title {
-         color: var(--dark);
-         letter-spacing: 1px;
-         margin-bottom: 10px;
-      }
-
       .page-route {
          color: var(--dark);
          font-weight: bold;
+         letter-spacing: 1px;
       }
 
       .page-route a {
@@ -49,42 +44,44 @@
    align-items: center;
    justify-content: space-between;
 
-   #category-name {
-      position: relative;
-      width: max-content;
-      color: var(--dark);
-   }
-
-   #category-name::before {
-      content: "";
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 50%;
-      height: 2px;
-      background: var(--dark);
-   }
-
-
-
    .buttons {
+      width: 100%;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
    }
 
    .buttons button {
       padding: 5px 10px;
-      margin-left: 10px;
       background: var(--light);
       border: 1px solid var(--grey);
       font-size: 1rem;
+   }
+
+   .buttons .sort-filter button {
+      margin: 0;
       border-radius: 3px;
    }
+
 
    .grid-list-buttons {
       display: none;
       align-items: center;
+      border-radius: 3px;
+      overflow: hidden;
+      border: 1px solid var(--dark);
+   }
+
+   .grid-list-buttons button {
+      border: none;
+   }
+
+   .grid-list-buttons hr {
+      width: 1px;
+      height: 15px;
+      border: none;
+      background: var(--grey);
+      opacity: .4;
    }
 
    .grid-list-buttons .list {

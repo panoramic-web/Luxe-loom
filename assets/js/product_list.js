@@ -3,7 +3,7 @@
 let products = [
    t_shirts = [
       {
-         category_name: 'T-shirts'
+         category_name: 'T shirts'
       }, {
          product_code: 1001,
          product_image: './assets/items/t shirts/TFETTERS-Fashion-Men-T-shirt-Slim-Fit-Custom-T-shirt-Crease-Design-Long-Stylish-Luxury-V__83553.1550172485.jpg',
@@ -157,14 +157,14 @@ jeans = [
          product_image: './assets/items/jeans/15886958_1.jpeg',
          product_name: 'Slim fit dark brown jeans',
          product_description: 'Available in black, white, grey',
-         product_price: '2500',
+         product_price: 2500,
          product_added_date: '2023-10-25'
    }, {
          product_code: 1022,
          product_image: './assets/items/jeans/How-Your-Jeans-Should-Fit-Ashley-Weston-Mens-Clothing-Fit-Guide.jpg',
          product_name: 'Slim fit jeans',
          product_description: 'Available in black, white, grey',
-         product_price: '3000',
+         product_price: 3000,
          product_added_date: '2023-10-22'
    }
 ]

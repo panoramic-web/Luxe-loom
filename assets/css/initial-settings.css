@@ -1,9 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Lines&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
-@import url('../bootstrap-icons-1.11.2/font/bootstrap-icons.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap') @import url('../bootstrap-icons-1.11.2/font/bootstrap-icons.min.css');
+
+/*// <uniquifier>: Use a uniquifier for the class name
+// <weight>: Use a value from 100 to 900
+*/
+.outfit-<uniquifier> {
+   font-family: "Outfit", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: <weight>;
+   font-style: normal;
+}
 
 @font-face {
    font-family: Poppins;
@@ -20,24 +30,21 @@
    src: url("../fonts/Raleway/Raleway-VariableFont_wght.ttf");
 }
 
+@font-face {
+   font-family: Rubik Lines;
+   src: url("../fonts/RubikLines/RubikLines-Regular.ttf");
+}
+
+/* Makes the font size of root element to 10px (62.5% of 16px = 10px) */
 :root {
    width: 100%;
-   /* Makes the font size of root element to 10px (62.5% of 16px = 10px) */
    font-size: 16px;
    --primary: #003459;
    --secondary: #007EA7;
    --light: #fff;
-   --dark: #31372A;
+   --dark: #212427;
    --grey: grey;
-   /* 00A8E8 007EA7 003459 00171F FFFFFF */
 }
-
-/*
-#F5F5F5
-#F2EAD3
-#DFD7BF
-#3F2305
-*/
 
 * {
    margin: 0;
@@ -166,12 +173,23 @@ ul {
       justify-content: center;
    }
 
+
    .left-section .logo {
+      display: flex;
+      align-items: center;
+      font-style: italic;
       color: var(--dark);
+      font-size: 1.3rem;
+      margin-right: 30px;
       font-weight: bold;
       font-family: 'Rubik Lines', sans-serif;
-      margin-right: 20px;
    }
+
+   .left-section .logo img {
+      width: 30px;
+   }
+
+
 
 
 
@@ -207,74 +225,6 @@ ul {
       display: flex;
       align-items: center;
    }
-
-
-
-
-
-   /*
-            <div id="theme-toggler">
-               <div class="icons">
-                  <i class="bi bi-sun"></i>
-                  <i class="bi bi-moon"></i>
-               </div>
-               
-               <input type="checkbox" name="theme-toggler" id="toggler">
-               <label class="knob" for="toggler"></label>
-            </div>
-
-*/
-
-
-   #theme-toggler {
-      position: relative;
-      width: 50px;
-      height: 25px;
-      box-shadow: inset 0 0 5px #ddd;
-      background: #fff;
-      border-radius: 100px;
-   }
-
-   #theme-toggler .icons {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-   }
-
-   #theme-toggler .icons i {
-      width: 25px;
-      height: 25px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-   }
-
-   #theme-toggler .knob {
-      position: absolute;
-      width: 25px;
-      height: 25px;
-      border-radius: 50px;
-      top: 0;
-      left: 0;
-      z-index: 3;
-      transition: .3s;
-      background: var(--dark);
-   }
-
-   #theme-toggler #toggler {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-   }
-
-   #theme-toggler #toggler:checked+.knob {
-      background: var(--light);
-      transform: translatex(25px);
-   }
-
-
-
-
 
 
 
@@ -326,7 +276,7 @@ ul {
    }
 
    #product-menu-icon span {
-      width: 23px;
+      width: 20px;
       height: 1px;
       display: block;
       background: var(--dark);
@@ -343,57 +293,179 @@ ul {
 
 
 
-#navbar #product-list {
+#navbar #sidebar {
    position: fixed;
    top: 0;
    left: -100%;
    width: 100%;
    height: 100vh;
    transition: .3s;
+   color: var(--dark);
    z-index: 1000;
 }
 
-#navbar #product-list.active {
+#navbar #sidebar.active {
    left: 0;
 }
 
-#navbar #product-list .menu {
+#navbar #sidebar .menu {
    width: 300px;
    height: 100vh;
    background: var(--light);
-   padding: 20px 0;
-   overflow: scroll;
+   overflow: hidden;
 }
 
-#navbar #product-list .title {
-   padding: 0 2px;
-   margin-bottom: 20px;
+#navbar #sidebar .titlebar {
+   padding: 15px 25px;
+   background: var(--light);
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   box-shadow: 0 0 5px #ddd;
 }
 
-#navbar #product-list #product {
-   margin-bottom: 20px;
-}
-
-#navbar #product-list .list .main-menu .main-menu-item {
+#navbar #sidebar .titlebar .logo {
+   display: flex;
+   align-items: center;
+   font-style: italic;
+   color: var(--dark);
+   font-size: 1.3rem;
+   margin-right: 30px;
    font-weight: bold;
+   font-family: 'Rubik Lines', sans-serif;
 }
 
-#navbar #product-list .list .main-menu .main-menu-item i {
-   font-weight: bold;
+#navbar #sidebar .titlebar .logo img {
+   width: 30px;
 }
 
-#navbar #product-list .list .main-menu .main-menu-item .sub-menu {
-   padding: 20px 0;
+#navbar #sidebar .titlebar #theme-toggler {
+   color: var(--dark);
+   font-size: 1.3rem;
 }
 
-#navbar #product-list .list .main-menu .main-menu-item .sub-menu li {
-   font-weight: normal;
-   margin-bottom: 10px;
+
+
+
+
+
+#navbar #sidebar .body {
+   width: 100%;
+   height: 100%;
+   padding-bottom: 57px;
+   overflow-y: scroll;
+
+   #product {
+      width: 100%;
+      font-weight: bold;
+      margin-top: 20px;
+      border: none;
+      outline: none;
+      background: none;
+      font-size: 1rem;
+   }
+
+   .products-menu {
+      padding: 10px 25px;
+   }
+
+   .products-menu .title {
+      color: var(--grey);
+      margin-bottom: 10px;
+   }
+
+   .submenu-1,
+   .submenu-2 {}
+
+
+   .main-menu>.item {
+      border-bottom: 1px solid #ddd;
+   }
+
+   .main-menu>.item>.submenu-1,
+   .submenu-1>.item>.submenu-2 {
+      padding: 0 10px;
+      display: none;
+   }
+
+   .main-menu>.item>.submenu-2 {
+      margin: 0;
+      padding: 0;
+   }
+
+   .submenu-1>.item>.submenu-2 a {
+      display: block;
+      padding: 10px;
+   }
+
+   .main-menu>.item>.submenu-1.active,
+   .submenu-1>.item>.submenu-2.active {
+      display: block;
+   }
+
+   .item h4 {
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   .item h4 i {
+      font-size: 1.4rem;
+   }
+
+   .submenu-1 .submenu-2 .item a {
+      display: block;
+      padding: 10px;
+   }
+
+
+
+
+
+
+
+
+   .contact-info {
+      padding: 10px 25px;
+      overflow: hidden;
+   }
+
+   .contact-info .title {
+      margin-bottom: 10px;
+   }
+
+   .contact-info ul {}
+
+
+   .features-info {
+      padding: 10px 25px;
+   }
+
+   .features-info .title {
+      margin-bottom: 10px;
+   }
+
+   .features-info ul {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+   }
+
+   .features-info ul li img {
+      width: 40px;
+   }
+
+   .features-info p {
+      word-spacing: 4px;
+      font-size: .7rem;
+   }
 }
 
-#navbar #product-list .list .main-menu .main-menu-item .sub-menu li a {
-   padding: 10px 20px;
-}
+
+
 
 
 

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="">
+   <title>Fashion castle | Checkout page</title>
+   <link rel="shortcut icon" type="image/x-icon" href="./icons/logo_dark.svg">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+   <link rel="stylesheet" href="./assets/bootstrap-icons-1.11.2/font/bootstrap-icons.min.css">
+   <link rel="stylesheet" href="./assets/fontawesome-free-6.4.0-web/css/all.min.css">
+   <link rel="stylesheet" href="./assets/css/checkout.css">
+</head>
+
+<body data-page="checkout">
+
+   <div class="preloader">
+      <div class="loader">
+         <h2>Future</h2>
+      </div>
+   </div>
+
+   <nav id="navbar">
+      <div class="topbar">
+         <p>Incredible changes to look</p>
+
+         <ul class="social-media-links">
+            <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+            <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+            <li><a href="#"><i class="bi bi-twitter-x"></i></a></li>
+         </ul>
+      </div>
+
+      <div class="bottombar">
+         <aside class="col-l">
+            <button id="product-menu-icon" type="button">
+               <span></span>
+               <span></span>
+            </button>
+
+            <section id="menu" class="menu">
+               <ul class="list">
+                  <li class="item"><a href="./index.html">Home</a></li>
+                  <li class="item"><a href="./shop.html">Shop</a></li>
+                  <li class="item"><a href="#">Blog</a></li>
+                  <li class="item"><a href="#">About</a></li>
+                  <li class="item"><a href="#">Contact</a></li>
+               </ul>
+            </section>
+         </aside>
+
+         <div class="col-m">
+            <a class="logo" href="./index.html"><span>Fashion</span>castle</a>
+         </div>
+
+         <aside class="col-r">
+            <select name="currency" id="currency-selector">
+               <option value="LKR" selected>LKR</option>
+               <option value="USD">USD</option>
+            </select>
+
+            &nbsp;
+            &nbsp;
+            <hr>
+            &nbsp;
+            &nbsp;
+
+            <a class="cart-icon" href="#"><i class="bi bi-bag"></i></a>
+         </aside>
+      </div>
+
+
+      <div id="sidebar" class="sidebar">
+         <div class="menu">
+            <div class="titlebar">
+               <a class="logo" href="./index.html"><img src="./assets/icons/logo_dark.svg" alt="Logo">uture</a>
+               <a id="theme-toggler" href="#"><i class="bi bi-moon"></i></a>
+            </div>
+
+            <div class="body">
+               <section class="products-menu">
+                  <h4 class="title">Products</h4>
+
+                  <!--Womenswear-->
+
+                  <div class="dropdown">
+                     <button onclick="dropdown(this)" class="dropbtn">Womenswear <i class="bi bi-plus"></i></button>
+
+                     <div id="dropdown-content" class="dropdown-content">
+                        <div class="dropdown-2">
+                           <button onclick="dropdown(this)" class="dropbtn">Casual wear <i class="bi bi-plus"></i></button>
+
+                           <div id="dropdown-content" class="dropdown-content">
+                              <a href="#">T shirts</a>
+                              <a href="#">Jeans</a>
+                              <a href="#">Shorts</a>
+                              <a href="#">Tank tops</a>
+                              <a href="#">Frocks</a>
+                           </div>
+                        </div>
+
+                        <div class="dropdown-2">
+                           <button onclick="dropdown(this)" class="dropbtn">Corporate wear <i class="bi bi-plus"></i></button>
+
+                           <div id="dropdown-content" class="dropdown-content">
+                              <a href="#">Shirts</a>
+                              <a href="#">Dress pants</a>
+                              <a href="#">Coats</a>
+                           </div>
+                        </div>
+
+                        <div class="dropdown-2">
+                           <button onclick="dropdown(this)" class="dropbtn">Active wear <i class="bi bi-plus"></i></button>
+
+                           <div id="dropdown-content" class="dropdown-content">
+                              <a href="#">Sports bra</a>
+                              <a href="#">Bottoms</a>
+                              <a href="#">Gym pants</a>
+                           </div>
+                        </div>
+
+                        <div class="dropdown-2">
+                           <button onclick="dropdown(this)" class="dropbtn">Evening wear <i class="bi bi-plus"></i></button>
+
+                           <div id="dropdown-content" class="dropdown-content">
+                              <a href="#">Sheath dress</a>
+                              <a href="#">Frocks</a>
+                           </div>
+                        </div>
+
+                        <div class="dropdown-2">
+                           <button onclick="dropdown(this)" class="dropbtn">Accessories <i class="bi bi-plus"></i></button>
+
+                           <div id="dropdown-content" class="dropdown-content">
+                              <a href="#">Shoes</a>
+                              <a href="#">Bags</a>
+                              <a href="#">Scarves</a>
+                              <a href="#">Sunglasses</a>
+                              <a href="#">Hair bands</a>
+                              <a href="#">Corsages</a>
+                              <a href="#">Earrings</a>
+                              <a href="#">Necklaces</a>
+                              <a href="#">Beads</a>
+                              <a href="#">Brooches</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+
+
+                  <!--Menswear-->
+
+
+                  <div class="dropdown">
+                     <button onclick="dropdown(this)" class="dropbtn">Menswear <i class="bi bi-plus"></i></button>
+
+                     <div id="dropdown-content" class="dropdown-content">
+                        <div class="dropdown-2">
+                           <button onclick="dropdown(this)" class="dropbtn">Casual wear <i class="bi bi-plus"></i></button>
+
+                           <div id="dropdown-content" class="dropdown-content">
+                              <a href="#">T shirts</a>
+                              <a href="#">Jeans</a>
+                              <a href="#">Shorts</a>
+                           </div>
+                        </div>
+
+                        <div class="dropdown-2">
+                           <button onclick="dropdown(this)" class="dropbtn">Corporate wear <i class="bi bi-plus"></i></button>
+
+                           <div id="dropdown-content" class="dropdown-content">
+                              <a href="#">Shirts</a>
+                              <a href="#">Formal pants</a>
+                           </div>
+                        </div>
+
+                        <div class="dropdown-2">
+                           <button onclick="dropdown(this)" class="dropbtn">Active wear <i class="bi bi-plus"></i></button>
+
+                           <div id="dropdown-content" class="dropdown-content">
+                              <a href="#">Shorts</a>
+                              <a href="#">Bottoms</a>
+                              <a href="#">Gym pants</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+
+                  <select name="product" id="product">
+                     <option value="0" selected>T shirts</option>
+                     <option value="1">Jeans</option>
+                  </select>
+               </section>
+
+
+
+               <section class="contact-info">
+                  <h4 class="title">Contacts</h4>
+
+                  <ul>
+                     <li><a href="#">Contact number</a></li>
+                     <li><a href="#">Future.style.example@gmail.com</a></li>
+                     <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                     <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                     <li><a href="#"><i class="bi bi-youtube"></i></a></li>
+                     <li><a href="#"><i class="bi bi-twitter-x"></i></a></li>
+                  </ul>
+               </section>
+
+
+               <section class="features-info">
+                  <h4 class="title">Secure payments</h4>
+
+                  <ul>
+                     <li><img src="/assets/icons/paypal-svgrepo-com.svg" alt=""></li>
+                     <li><img src="/assets/icons/mastercard-svgrepo-com.svg" alt=""></li>
+                     <li><img src="/assets/icons/visa-svgrepo-com (1).svg" alt=""></li>
+                     <li><img src="/assets/icons/cash-svgrepo-com.svg" alt=""></li>
+                  </ul>
+
+                  <p>Secured online shopping experience with 1000+ weekly buyers, cash on delivery brings you more relief</p>
+               </section>
+            </div>
+         </div>
+      </div>
+   </nav>
+
+   <main id="main">
+      <div class="container"></div>
+
+      <div class="chechout_product">
+         <div class="preview">
+            <img class="image" src="" alt="">
+
+            <div class="preview-images">
+               <!-- Slider main container -->
+               <div class="swiper">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                     <!-- Slides -->
+                     <div class="swiper-slide"></div>
+                     <div class="swiper-slide"></div>
+                     <div class="swiper-slide"></div>
+                     <div class="swiper-slide"></div>
+                  </div>
+                  <!-- If we need pagination -->
+                  <!-- <div class="swiper-pagination"></div> -->
+
+                  <!-- If we need navigation buttons -->
+                  <!-- <div class="swiper-button-prev"></div> -->
+                  <!-- <div class="swiper-button-next"></div> -->
+
+                  <!-- If we need scrollbar -->
+                  <!-- <div class="swiper-scrollbar"></div> -->
+               </div>
+            </div>
+
+         </div>
+
+         <div class="details"></div>
+      </div>
+   </main>
+
+
+
+
+
+
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+   <script src="./assets/js/money.js"></script>
+   <script src="./assets/js/money.min.js"></script>
+
+   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+   <script src="https://kit.fontawesome.com/94a745351e.js" crossorigin="anonymous"></script>
+   <script src="./assets/package/swiper-bundle.min.js"></script>
+   <script src="./assets/js/gsap.min.js"></script>
+   <script src="./assets/js/TimelineLite.min.js"></script>
+   <script src="./assets/js/product_list.js"></script>
+   <script src="./assets/js/common-settings.js"></script>
+   <script src="./assets/js/checkout.js"></script>
+
+</body>
+
+</html>

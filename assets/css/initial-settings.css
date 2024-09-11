@@ -351,11 +351,7 @@ ul {
    font-size: 1.3rem;
    margin-right: 30px;
    font-weight: bold;
-   font-family: 'Rubik Lines', sans-serif;
-}
-
-#navbar #sidebar .titlebar .logo img {
-   width: 30px;
+   font-family: 'SpaceX', sans-serif;
 }
 
 #navbar #sidebar .titlebar #theme-toggler {

@@ -1,9 +1,8 @@
 #footer {
    position: relative;
    width: 100%;
-   padding: 50px 8%;
+   padding: 50px 6%;
    overflow: hidden;
-
 
    .content {
       width: 100%;
@@ -91,9 +90,6 @@
       background: #EAFFF2;
       border-radius: 10px;
    }
-
-
-
 
 
 
@@ -200,10 +196,6 @@
 
 
 @media only screen and (max-width: 400px) {
-   #footer .brand_info p {
-      width: 100%;
-   }
-
    #footer .mid {
       display: grid;
       grid-template-areas: "col1" "col2" "col3" "col4" "col5";

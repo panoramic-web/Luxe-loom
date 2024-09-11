@@ -1,5 +1,6 @@
 var preloader = document.querySelector('.preloader'),
    theme_toggler = document.querySelector('#theme-toggler'),
+   page = document.body.getAttribute('data-page'),
    theme,
    product_menu_icon = document.querySelector('#product-menu-icon'),
    sidebar = document.querySelector('#sidebar'),
@@ -19,15 +20,13 @@ var preloader = document.querySelector('.preloader'),
    menu = document.querySelector('#menu'),
    nav_links = document.querySelectorAll('#menu .list .item');
 
+      localStorage.setItem('page', page);
 
-dropdown_items.forEach(item => {
-   item.onclick = function() {
-      
-      this.querySelector('i').classList.toggle('bi-plus');
-      this.querySelector('i').classList.toggle('bi-dash');
-      this.parentNode.querySelector('ul').classList.toggle('active');
-   }
-})
+function dropdown(btn) {
+   btn.parentNode.querySelector('#dropdown-content').classList.toggle('active');
+   btn.querySelector('i').classList.toggle('bi-plus');
+   btn.querySelector('i').classList.toggle('bi-dash');
+}
 
 
 
@@ -70,7 +69,7 @@ var toggle_func = () => {
 
 var dark_theme_css = document.createElement('link');
 dark_theme_css.rel = 'stylesheet';
-dark_theme_css.href = './assets/css/dark_theme.css';
+dark_theme_css.href = `./assets/css/${page}_dark.css`;
 
 theme_toggler.onclick = function() {
    if (localStorage.getItem('theme') == 'light') {

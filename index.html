@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="">
+   <title>Fashion castle | Homepage (Online shopping with quality guaranteed and customer friendly store)</title>
+   <link rel="shortcut icon" type="image/x-icon" href="./icons/logo_dark.svg">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
+   <link rel="stylesheet" href="./assets/bootstrap-icons-1.11.2/font/bootstrap-icons.min.css">
+   <link rel="stylesheet" href="./assets/fontawesome-free-6.4.0-web/css/all.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+   <link rel="stylesheet" href="./assets/package/swiper-bundle.min.css">
+   <link rel="stylesheet" href="./assets/css/style.css">
+   <!-- <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css"> -->
+   <!-- <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css"> -->
+</head>
+
+<body data-page="index">
+
+   <div class="preloader">
+      <div class="loader">
+         <h2>Fashion castle</h2>
+      </div>
+   </div>
+
+   <nav id="navbar">
+      <div class="topbar">
+         <p>Incredible changes to look</p>
+
+         <ul class="social-media-links">
+            <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+            <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+            <li><a href="#"><i class="bi bi-twitter-x"></i></a></li>
+         </ul>
+      </div>
+
+      <div class="bottombar">
+         <aside class="col-l">
+            <button id="product-menu-icon" type="button">
+               <span></span>
+               <span></span>
+            </button>
+
+            <section id="menu" class="menu">
+               <ul class="list">
+                  <li class="item active"><a href="./index.html">Home</a></li>
+                  <li class="item"><a href="./shop.html">Shop</a></li>
+                  <li class="item"><a href="#">Blog</a></li>
+                  <li class="item"><a href="#">About</a></li>
+                  <li class="item"><a href="#">Contact</a></li>
+               </ul>
+            </section>
+         </aside>
+
+         <div class="col-m">
+            <a class="logo" href="./index.html"><span>Fashion</span>castle</a>
+         </div>
+
+         <aside class="col-r">
+            <select name="currency" id="currency-selector">
+               <option value="LKR" selected>LKR</option>
+               <option value="USD">USD</option>
+            </select>
+
+            &nbsp;
+            &nbsp;
+            <hr>
+            &nbsp;
+            &nbsp;
+
+            <a class="cart-icon" href="#"><i class="bi bi-bag"></i></a>
+         </aside>
+      </div>
+
+
+
+      <div id="sidebar" class="sidebar">
+         <div class="menu">
+            <div class="titlebar">
+               <a class="logo" href="./index.html"><span>Fashion</span>castle</a>
+               <!-- <a class="logo" href="./index.html"><img src="./assets/icons/logo_dark.svg" alt="Logo">uture</a> -->
+               <a id="theme-toggler" href="#"><i class="bi bi-moon"></i></a>
+            </div>
+
+            <div class="body">
+               <section class="products-menu">
+                  <h4 class="title">Products</h4>
+
+                  <!--Womenswear-->
+
+                  <div class="dropdown">
+                     <button onclick="dropdown(this)" class="dropbtn">Womenswear <i class="bi bi-plus"></i></button>
+
+                     <div id="dropdown-content" class="dropdown-content">
+                        <div class="dropdown-2">
+                           <button onclick="dropdown(this)" class="dropbtn">Casual wear <i class="bi bi-plus"></i></button>
+
+                           <div id="dropdown-content" class="dropdown-content">
+                              <a href="#">T shirts</a>
+                              <a href="#">Jeans</a>
+                              <a href="#">Shorts</a>
+                              <a href="#">Tank tops</a>
+                              <a href="#">Frocks</a>
+                           </div>
+                        </div>
+
+                        <div class="dropdown-2">
+                           <button onclick="dropdown(this)" class="dropbtn">Corporate wear <i class="bi bi-plus"></i></button>
+
+                           <div id="dropdown-content" class="dropdown-content">
+                              <a href="#">Shirts</a>
+                              <a href="#">Dress pants</a>
+                              <a href="#">Coats</a>
+                           </div>
+                        </div>
+
+                        <div class="dropdown-2">
+                           <button onclick="dropdown(this)" class="dropbtn">Active wear <i class="bi bi-plus"></i></button>
+
+                           <div id="dropdown-content" class="dropdown-content">
+                              <a href="#">Sports bra</a>
+                              <a href="#">Bottoms</a>
+                              <a href="#">Gym pants</a>
+                           </div>
+                        </div>
+
+                        <div class="dropdown-2">
+                           <button onclick="dropdown(this)" class="dropbtn">Evening wear <i class="bi bi-plus"></i></button>
+
+                           <div id="dropdown-content" class="dropdown-content">
+                              <a href="#">Sheath dress</a>
+                              <a href="#">Frocks</a>
+                           </div>
+                        </div>
+
+                        <div class="dropdown-2">
+                           <button onclick="dropdown(this)" class="dropbtn">Accessories <i class="bi bi-plus"></i></button>
+
+                           <div id="dropdown-content" class="dropdown-content">
+                              <a href="#">Shoes</a>
+                              <a href="#">Bags</a>
+                              <a href="#">Scarves</a>
+                              <a href="#">Sunglasses</a>
+                              <a href="#">Hair bands</a>
+                              <a href="#">Corsages</a>
+                              <a href="#">Earrings</a>
+                              <a href="#">Necklaces</a>
+                              <a href="#">Beads</a>
+                              <a href="#">Brooches</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+
+
+                  <!--Menswear-->
+
+
+                  <div class="dropdown">
+                     <button onclick="dropdown(this)" class="dropbtn">Menswear <i class="bi bi-plus"></i></button>
+
+                     <div id="dropdown-content" class="dropdown-content">
+                        <div class="dropdown-2">
+                           <button onclick="dropdown(this)" class="dropbtn">Casual wear <i class="bi bi-plus"></i></button>
+
+                           <div id="dropdown-content" class="dropdown-content">
+                              <a href="#">T shirts</a>
+                              <a href="#">Jeans</a>
+                              <a href="#">Shorts</a>
+                           </div>
+                        </div>
+
+                        <div class="dropdown-2">
+                           <button onclick="dropdown(this)" class="dropbtn">Corporate wear <i class="bi bi-plus"></i></button>
+
+                           <div id="dropdown-content" class="dropdown-content">
+                              <a href="#">Shirts</a>
+                              <a href="#">Formal pants</a>
+                           </div>
+                        </div>
+
+                        <div class="dropdown-2">
+                           <button onclick="dropdown(this)" class="dropbtn">Active wear <i class="bi bi-plus"></i></button>
+
+                           <div id="dropdown-content" class="dropdown-content">
+                              <a href="#">Shorts</a>
+                              <a href="#">Bottoms</a>
+                              <a href="#">Gym pants</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+
+                  <select name="product" id="product">
+                     <option value="0" selected>T shirts</option>
+                     <option value="1">Jeans</option>
+                  </select>
+               </section>
+
+
+
+               <section class="contact-info">
+                  <h4 class="title">Contacts</h4>
+
+                  <ul>
+                     <li><a href="#">+1367775577</a></li>
+                     <li><a href="#">future.example@gmail.com</a></li>
+                  </ul>
+               </section>
+
+
+               <section class="features-info">
+                  <h4 class="title">Secure payments</h4>
+
+                  <ul>
+                     <li><img src="/assets/icons/paypal-svgrepo-com.svg" alt=""></li>
+                     <li><img src="/assets/icons/mastercard-svgrepo-com.svg" alt=""></li>
+                     <li><img src="/assets/icons/visa-svgrepo-com (1).svg" alt=""></li>
+                     <li><img src="/assets/icons/cash-svgrepo-com.svg" alt=""></li>
+                  </ul>
+
+                  <p>Secured online shopping experience with 1000+ weekly buyers, cash on delivery brings you more relief</p>
+               </section>
+            </div>
+         </div>
+      </div>
+   </nav>
+
+   <header id="header">
+      <div class="carousel_2">
+         <!-- Slider main container -->
+         <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+               <!-- Slides -->
+               <div class="swiper-slide">
+                  <div class="info">
+                     <h2>Modern fashion trends</h2>
+                     <p>Providing with latest fashion trends and numerous designs and colors that best suits for each individual.</p>
+                     <a href="./shop.html"><i class="bi bi-bag"></i> &nbsp; Shop</a>
+                  </div>
+               </div>
+
+               <div class="swiper-slide">
+                  <div class="info">
+                     <h2>Better than you wanted</h2>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem exercitationem, earum impedit sapiente nesciunt reiciendis necessitatibus facilis.</p>
+                     <a href="./shop.html"><i class="bi bi-bag"></i> &nbsp; Shop</a>
+                  </div>
+               </div>
+
+               <div class="swiper-slide">
+                  <div class="info">
+                     <h2>High quality materials</h2>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem exercitationem, earum impedit sapiente nesciunt reiciendis necessitatibus facilis.</p>
+                     <a href="./shop.html"><i class="bi bi-bag"></i> &nbsp; Shop</a>
+                  </div>
+               </div>
+
+               <div class="swiper-slide">
+                  <div class="info">
+                     <h2>Reasonable prices</h2>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem exercitationem, earum impedit sapiente nesciunt reiciendis necessitatibus facilis.</p>
+                     <a href="./shop.html"><i class="bi bi-bag"></i> &nbsp; Shop</a>
+                  </div>
+               </div>
+            </div>
+            <!-- If we need pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+
+            <!-- If we need navigation buttons -->
+            <!-- <div class="swiper-button-prev"></div> -->
+            <!-- <div class="swiper-button-next"></div> -->
+
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+         </div>
+      </div>
+   </header>
+
+
+   <main id="main">
+      <div class="seasonal-offers">
+         <h2 class="title">New arrivals</h2>
+         <div class="seasonal-offers-slider">
+            <div class="swiper-wrapper">
+               <div class="swiper-slide"><img src="./assets/images/104518024-portrait-of-a-beautiful-girl-model-in-clothes-on-a-white-background-female-fashion-beauty-and.jpg" alt=""></div>
+               <div class="swiper-slide"><img src="./assets/images/104518024-portrait-of-a-beautiful-girl-model-in-clothes-on-a-white-background-female-fashion-beauty-and.jpg" alt=""></div>
+               <div class="swiper-slide"><img src="./assets/images/104518024-portrait-of-a-beautiful-girl-model-in-clothes-on-a-white-background-female-fashion-beauty-and.jpg" alt=""></div>
+               <div class="swiper-slide"><img src="./assets/images/104518024-portrait-of-a-beautiful-girl-model-in-clothes-on-a-white-background-female-fashion-beauty-and.jpg" alt=""></div>
+               <div class="swiper-slide"><img src="./assets/images/104518024-portrait-of-a-beautiful-girl-model-in-clothes-on-a-white-background-female-fashion-beauty-and.jpg" alt=""></div>
+               <div class="swiper-slide"><img src="./assets/images/104518024-portrait-of-a-beautiful-girl-model-in-clothes-on-a-white-background-female-fashion-beauty-and.jpg" alt=""></div>
+               <div class="swiper-slide"><img src="./assets/images/104518024-portrait-of-a-beautiful-girl-model-in-clothes-on-a-white-background-female-fashion-beauty-and.jpg" alt=""></div>
+               <div class="swiper-slide"><img src="./assets/images/104518024-portrait-of-a-beautiful-girl-model-in-clothes-on-a-white-background-female-fashion-beauty-and.jpg" alt=""></div>
+               <div class="swiper-slide"><img src="./assets/images/104518024-portrait-of-a-beautiful-girl-model-in-clothes-on-a-white-background-female-fashion-beauty-and.jpg" alt=""></div>
+               <div class="swiper-slide"><img src="./assets/images/104518024-portrait-of-a-beautiful-girl-model-in-clothes-on-a-white-background-female-fashion-beauty-and.jpg" alt=""></div>
+            </div>
+         </div>
+      </div>
+
+      <div id="catalog">
+         <div class="grid">
+            <div class="item_1">
+               <img src="./assets/images/3bd65c478dfdfb1ce7bc33f9f8f2f84c.jpg" alt="">
+            </div>
+            <div class="item_2">
+               <img src="./assets/images/104518024-portrait-of-a-beautiful-girl-model-in-clothes-on-a-white-background-female-fashion-beauty-and.jpg" alt="">
+            </div>
+            <div class="item_3">
+               <img src="./assets/images/3bd65c478dfdfb1ce7bc33f9f8f2f84c.jpg" alt="">
+            </div>
+            <div class="item_4">
+               <img src="./assets/images/104518024-portrait-of-a-beautiful-girl-model-in-clothes-on-a-white-background-female-fashion-beauty-and.jpg" alt="">
+            </div>
+         </div>
+      </div>
+
+      <div id="new-arrivals">
+         <h2 class="title">Featured products</h2>
+         <div class="for-you-slider">
+            <div class="swiper-wrapper">
+               <div class="swiper-slide"><img src="./assets/images/104518024-portrait-of-a-beautiful-girl-model-in-clothes-on-a-white-background-female-fashion-beauty-and.jpg" alt=""></div>
+               <div class="swiper-slide"><img src="./assets/images/104518024-portrait-of-a-beautiful-girl-model-in-clothes-on-a-white-background-female-fashion-beauty-and.jpg" alt=""></div>
+               <div class="swiper-slide"><img src="./assets/images/104518024-portrait-of-a-beautiful-girl-model-in-clothes-on-a-white-background-female-fashion-beauty-and.jpg" alt=""></div>
+               <div class="swiper-slide"><img src="./assets/images/104518024-portrait-of-a-beautiful-girl-model-in-clothes-on-a-white-background-female-fashion-beauty-and.jpg" alt=""></div>
+               <div class="swiper-slide"><img src="./assets/images/104518024-portrait-of-a-beautiful-girl-model-in-clothes-on-a-white-background-female-fashion-beauty-and.jpg" alt=""></div>
+               <div class="swiper-slide"><img src="./assets/images/104518024-portrait-of-a-beautiful-girl-model-in-clothes-on-a-white-background-female-fashion-beauty-and.jpg" alt=""></div>
+               <div class="swiper-slide"><img src="./assets/images/104518024-portrait-of-a-beautiful-girl-model-in-clothes-on-a-white-background-female-fashion-beauty-and.jpg" alt=""></div>
+               <div class="swiper-slide"><img src="./assets/images/104518024-portrait-of-a-beautiful-girl-model-in-clothes-on-a-white-background-female-fashion-beauty-and.jpg" alt=""></div>
+               <div class="swiper-slide"><img src="./assets/images/104518024-portrait-of-a-beautiful-girl-model-in-clothes-on-a-white-background-female-fashion-beauty-and.jpg" alt=""></div>
+               <div class="swiper-slide"><img src="./assets/images/104518024-portrait-of-a-beautiful-girl-model-in-clothes-on-a-white-background-female-fashion-beauty-and.jpg" alt=""></div>
+               <div class="swiper-slide"><img src="./assets/images/104518024-portrait-of-a-beautiful-girl-model-in-clothes-on-a-white-background-female-fashion-beauty-and.jpg" alt=""></div>
+            </div>
+         </div>
+      </div>
+
+
+      <div id="services">
+         <div class="left">
+            <h2 class="title">About us</h2>
+            <p class="info">One of the leading online fashion stores in Sri lanka with quality products at reasonable prices as well as easy payment methods including COD (cash on delivery), which makes us outstanding. <br><br> We have gained a big customer base in a short period of time since 2020. We are grateful to see you shopping with us!</p>
+            <a class="overview" href="./shop.html">Products</a>
+         </div>
+
+         <div class="grid">
+            <div class="grid_item_1"></div>
+            <div class="grid_item_2"></div>
+            <div class="grid_item_3"></div>
+            <div class="grid_item_4"></div>
+         </div>
+      </div>
+
+
+      <!-- <div>
+         <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/ikp1j-BdGgc?controls=0&amp;start=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div> -->
+
+
+      <div class="newsletter-section">
+         <div>
+            <h3 class="title">Subscribe to our updates!</h3>
+            <h2 class="title2">Stay in touch!</h2>
+            <p class="subtitle">Be the first to receive updates on latest offers, new arrivals and more as soon as possible.</p>
+         </div>
+
+         <form class="form" action="" method="post">
+            <input type="email" name="email" id="email" placeholder="E-mail address" required>
+            <button class="submit" type="submit">Subscribe</button>
+         </form>
+      </div>
+   </main>
+
+
+
+
+
+   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+   <script src="https://kit.fontawesome.com/94a745351e.js" crossorigin="anonymous"></script>
+   <script src="./assets/package/swiper-bundle.min.js"></script>
+   <script src="./assets/js/gsap.min.js"></script>
+   <script src="./assets/js/TimelineLite.min.js"></script>
+   <script src="./assets/js/common-settings.js"></script>
+   <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>

@@ -31,7 +31,6 @@
       }
 
       .page-route a {
-         color: var(--grey);
          font-weight: normal;
       }
    }
@@ -185,13 +184,13 @@
    .card .details .code {
       font-size: .6rem;
       text-transform: uppercase;
-      color: var(--grey);
+      color: var(--dark);
    }
 
    .card .details .description {
       margin-bottom: .5rem;
       font-size: .6rem;
-      color: var(--grey);
+      color: var(--dark);
    }
 
    .card .details .price {
@@ -260,13 +259,13 @@
    .card .details .code {
       font-size: .6rem;
       text-transform: uppercase;
-      color: var(--grey);
+      color: var(--dark);
    }
 
    .card .details .description {
       margin-bottom: .5rem;
       font-size: .6rem;
-      color: var(--grey);
+      color: var(--dark);
    }
 
    .card .details .price {
@@ -327,4 +326,43 @@
    #shop .g3 {
       gap: 1rem;
    }
+}
+
+
+
+#pagination {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+#pagination .prev,
+#pagination .next {
+   padding: 10px 10px;
+   margin: 0 10px;
+   border: 1px solid var(--grey);
+   color: var(--dark);
+   font-weight: bold;
+   transition: .3s;
+}
+
+#pagination .prev:hover,
+#pagination .next:hover {
+   border: 1px solid var(--dark);
+   background: var(--dark);
+   color: var(--light);
+}
+
+#pagination .pages {}
+
+#pagination .pages .page {
+   display: inline-block;
+   padding: 5px 10px;
+   margin: 0 5px;
+}
+
+#pagination .pages .active {
+   transform: scale(1.2);
+   color: var(--light);
+   background: var(--dark);
 }

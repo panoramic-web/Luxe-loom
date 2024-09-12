@@ -66,7 +66,6 @@ body {
    font-family: 'Montserrat', sans-serif;
    position: relative;
    padding-top: 55px;
-   font-size: 16px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -140,7 +139,7 @@ ul {
       height: 30px;
       background: var(--dark);
       color: var(--light);
-      padding: 5px 6%;
+      padding: 5px 5%;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -169,7 +168,7 @@ ul {
 
 
    .bottombar {
-      padding: 8px 6%;
+      padding: 13px 5%;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -238,16 +237,8 @@ ul {
       .logo {
          color: var(--dark);
          font-size: 1.3rem;
-         font-family: 'Spacex', sans-serif;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         flex-direction: column;
-      }
-
-      .logo span {
-         font-size: .8rem;
-         margin-bottom: -5px;
+         font-family: 'Montserrat', sans-serif;
+         text-transform: uppercase;
       }
    }
 

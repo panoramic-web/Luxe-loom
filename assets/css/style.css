@@ -10,8 +10,9 @@
    background: url("../../1fbfd6dee8f32302645fe5eaea3323af-01.jpg") no-repeat center / cover;
 
    .carousel_2 {
-      width: 100%;
+      width: 90%;
       height: 400px;
+      margin: 0 auto;
       overflow: hidden;
    }
 
@@ -92,7 +93,7 @@
 }
 
 #main .seasonal-offers {
-   padding: 50px 6%;
+   padding: 50px 5%;
    padding-bottom: 0;
 }
 
@@ -126,7 +127,7 @@
 
 #catalog {
    width: 100%;
-   padding: 30px 10%;
+   padding: 30px 5%;
    margin: 0 auto;
 }
 
@@ -174,7 +175,7 @@
 
 
 #main #new-arrivals {
-   padding: 50px 6%;
+   padding: 50px 5%;
 }
 
 #main #new-arrivals .title {
@@ -209,13 +210,13 @@
 
 #services {
    width: 100%;
-   max-width: 900px;
    margin: 0 auto;
    height: max-content;
    display: flex;
    align-items: center;
    justify-content: center;
-   padding: 50px 6%;
+   padding: 50px 5%;
+   background: #F9F9F9;
 }
 
 #services .grid {
@@ -312,6 +313,7 @@
 @media (max-width: 600px) {
    #services {
       flex-direction: column;
+      text-align: center;
    }
 
    #services .grid {
@@ -325,6 +327,7 @@
 
    #services .left .title {
       font-size: 1.5rem;
+      width: 100%;
    }
 
    #services .left .overview {
@@ -341,74 +344,76 @@
 .newsletter-section {
    width: 100%;
    height: max-content;
-   padding: 50px 6%;
+   padding: 50px 5%;
    display: flex;
    align-items: center;
-}
+   background: url("../../img/0fa3400891f5dc9835bd1141ec256375.jpg") no-repeat center / cover;
 
-.newsletter-section div {
-   flex: 1;
-}
+   div {
+      flex: 1;
+   }
 
-.newsletter-section .title {
-   color: #555;
-   font-weight: normal;
-}
+   .title {
+      color: #C36618;
+      text-transform: uppercase;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+   }
 
-.newsletter-section .title2 {
-   color: var(--dark);
-}
-
-.newsletter-section p {
-   color: var(--dark);
-}
-
+   p {
+      font-weight: 500;
+      color: #ddd;
+   }
 
 
-.newsletter-section .form {
-   width: 100%;
-   margin-left: 50px;
-   flex: 1;
-}
 
-.newsletter-section .form input {
-   display: block;
-}
+   .form {
+      width: 100%;
+      margin-left: 50px;
+      flex: 1;
+   }
 
-.newsletter-section .form input[type="email"] {
-   width: 100%;
-   outline: none;
-   border: 1px solid #ddd;
-   padding: 15px;
-   margin-bottom: 10px;
-   color: var(--dark);
-   background: var(--light);
-   border-radius: 4px;
-   font-size: 1rem;
-}
+   .form input {
+      display: block;
+   }
 
-.newsletter-section .form input[type="email"]::placeholder {
-   color: var(--dark);
-}
+   .form input[type="email"] {
+      width: 100%;
+      outline: none;
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 10px;
+      color: #C36618;
+      background: #F9F9F977;
+      border-radius: 50px;
+      font-size: 1rem;
+   }
 
-.newsletter-section .form .submit {
-   width: 100%;
-   color: var(--light);
-   border: none;
-   padding: 15px;
-   border-radius: 4px;
-   font-size: 1rem;
-   background: var(--dark);
-}
+   .form input[type="email"]::placeholder {
+      color: #C36618;
+   }
 
-.newsletter-section .form .submit:hover {
-   background: var(--primary);
+   .form .submit {
+      width: 100%;
+      color: var(--light);
+      border: none;
+      padding: 15px;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      background: var(--dark);
+      background: #C36618cc;
+   }
+
+   .form .submit:hover {
+      background: #C36618;
+   }
 }
 
 @media only screen and (max-width: 700px) {
    .newsletter-section {
       flex-direction: column;
       align-items: start;
+      text-align: center;
    }
 
    .newsletter-section .title2 {

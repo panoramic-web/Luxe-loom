@@ -13,78 +13,76 @@
    max-width: 1000px;
    height: max-content;
    margin: 0 auto;
-}
 
-#shop .shop-header {
-   width: 100%;
-   padding: 50px 6% 0 6%;
+   .shop-header {
+      width: 100%;
+      padding: 50px 5% 0 5%;
 
-   .titlebar {
-      align-items: center;
-      transition: .3s;
-      margin-bottom: 30px;
+      .titlebar {
+         align-items: center;
+         transition: .3s;
+         margin-bottom: 30px;
+      }
 
-      .page-route {
+      .titlebar .page-route {
          color: var(--dark);
          font-weight: bold;
          letter-spacing: 1px;
       }
 
-      .page-route a {
+      .titlebar .page-route a {
          font-weight: normal;
       }
    }
-}
 
-
-
-#shop .settings {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-
-   .buttons {
-      width: 100%;
+   .settings {
       display: flex;
       align-items: center;
       justify-content: space-between;
-   }
 
-   .buttons button {
-      padding: 5px 10px;
-      background: var(--light);
-      border: 1px solid var(--grey);
-      font-size: 1rem;
-   }
+      .buttons {
+         width: 100%;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+      }
 
-   .buttons .sort-filter button {
-      margin: 0;
-      border-radius: 3px;
-   }
+      .buttons button {
+         padding: 5px 10px;
+         background: var(--light);
+         border: 1px solid var(--grey);
+         font-size: 1rem;
+      }
+
+      .buttons .sort-filter button {
+         margin: 0;
+         border-radius: 3px;
+      }
 
 
-   .grid-list-buttons {
-      display: none;
-      align-items: center;
-      border-radius: 3px;
-      overflow: hidden;
-      border: 1px solid var(--dark);
-   }
+      .grid-list-buttons {
+         display: none;
+         align-items: center;
+         border-radius: 3px;
+         overflow: hidden;
+         border: 1px solid var(--dark);
+      }
 
-   .grid-list-buttons button {
-      border: none;
-   }
+      .grid-list-buttons button {
+         border: none;
+      }
 
-   .grid-list-buttons hr {
-      width: 1px;
-      height: 15px;
-      border: none;
-      background: var(--grey);
-      opacity: .4;
-   }
+      .grid-list-buttons hr {
+         width: 1px;
+         height: 15px;
+         border: none;
+         background: var(--grey);
+         opacity: .4;
+      }
 
-   .grid-list-buttons .list {
-      display: none;
+      .grid-list-buttons .list {
+         display: none;
+      }
    }
 }
 
@@ -127,7 +125,7 @@
 #shop #showcase {
    width: 100%;
    height: max-content;
-   padding: 30px 6%;
+   padding: 30px 5%;
 }
 
 #shop .grid-view {

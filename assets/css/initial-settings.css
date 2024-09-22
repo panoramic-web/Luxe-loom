@@ -5,6 +5,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap') @import url('../bootstrap-icons-1.11.2/font/bootstrap-icons.min.css');
 
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 /*// <uniquifier>: Use a uniquifier for the class name
 // <weight>: Use a value from 100 to 900
 */
@@ -12,6 +15,12 @@
    font-family: "Outfit", sans-serif;
    font-optical-sizing: auto;
    font-weight: <weight>;
+   font-style: normal;
+}
+
+.pacifico-regular {
+   font-family: "Pacifico", cursive;
+   font-weight: 400;
    font-style: normal;
 }
 
@@ -52,8 +61,19 @@
 }
 
 
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: inherit;
+   line-height: 1.5;
+   border: 0;
+   outline: 0;
+   text-decoration: none;
+   list-style: none;
 
-
+   scroll-behavior: smooth;
+}
 
 
 
@@ -87,21 +107,11 @@ p {
 
 
 
-* {
-   margin: 0;
-   padding: 0;
-   -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-   box-sizing: border-box;
-   scroll-behavior: smooth;
-   line-height: 1.5;
-}
-
 body {
    width: 100%;
    font-family: 'Montserrat', sans-serif;
    position: relative;
-   padding-top: 55px;
+   /* padding-top: 55px; */
 }
 
 /* @media only screen and (max-width: 600px) {
@@ -153,25 +163,21 @@ ul {
 }
 
 .preloader .loader h2 {
-   font-size: 1.5rem;
+   font-size: 2rem;
    color: var(--light);
 }
 
 
 
 #navbar {
-   width: 100%;
-   height: max-content;
-   background: var(--light);
    position: fixed;
    top: 0;
    left: 0;
+   width: 100%;
    transition: background .3s;
-   box-shadow: 0 0 5px #ddd;
    z-index: 100;
 
-   .topbar {
-      width: 100%;
+   .top {
       height: 30px;
       background: var(--dark);
       color: var(--light);
@@ -182,29 +188,29 @@ ul {
       transition: background .3s;
    }
 
-   .topbar p {
+   .top .text {
       font-weight: bold;
-      font-size: .8rem;
-      text-transform: uppercase;
+      font-family: "Pacifico", cursive;
    }
 
-   .topbar .social-media-links {
+   .top .social-links {
       display: flex;
       align-items: center;
    }
 
-   .topbar .social-media-links li {
+   .top .social-links li {
       margin-left: 20px;
    }
 
-   .topbar .social-media-links li a {
+   .top .social-links li a {
       color: var(--light);
    }
 
 
 
-   .bottombar {
+   .bottom {
       padding: 13px 5%;
+      background: var(--light);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -214,9 +220,6 @@ ul {
       flex: 1;
       display: flex;
       align-items: center;
-   }
-
-   .col-l {
 
       #product-menu-icon {
          background: none;
@@ -234,6 +237,8 @@ ul {
       #product-menu-icon span:first-child {
          margin-bottom: 7px;
       }
+
+
 
       #menu {
          display: flex;
@@ -261,27 +266,20 @@ ul {
       #menu .list li.active a {
          color: #000;
       }
-
    }
+
+
+
 
    .col-m {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
 
       .logo {
+         font-size: 1.2rem;
+         font-weight: bold;
+         font-family: "Pacifico", cursive;
          color: var(--dark);
-         font-size: 1.3rem;
-         font-family: 'Montserrat', sans-serif;
-         text-transform: uppercase;
       }
    }
-
-
-
-
-
 
 
 
@@ -335,9 +333,9 @@ ul {
 }
 
 
-
-
-
+#navbar.fixed {
+   box-shadow: 0 0 5px #ddd;
+}
 
 
 #navbar #sidebar {
@@ -492,8 +490,6 @@ ul {
    }
 
    .features-info p {
-      word-spacing: 4px;
-      font-size: .7rem;
    }
 }
 

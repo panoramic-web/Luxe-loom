@@ -4,6 +4,8 @@
 #main {
    width: 100%;
    height: max-content;
+   margin-top: 83px;
+   padding: 20px 0;
    background: var(--light);
    transition: background .3s;
 }
@@ -16,12 +18,12 @@
 
    .shop-header {
       width: 100%;
-      padding: 50px 5% 0 5%;
+      padding: 0 5%;
 
       .titlebar {
          align-items: center;
          transition: .3s;
-         margin-bottom: 30px;
+         margin-bottom: 20px;
       }
 
       .titlebar .page-route {
@@ -125,7 +127,7 @@
 #shop #showcase {
    width: 100%;
    height: max-content;
-   padding: 30px 5%;
+   padding: 20px 5%;
 }
 
 #shop .grid-view {

@@ -3,11 +3,13 @@
 
 #main {
    width: 100%;
+   margin-top: 83px;
+   padding: 20px 0;
    overflow-x: hidden;
 }
 
-.container{
-   padding: 30px 6%;
+.container {
+   padding: 0 6%;
 }
 
 .card {
@@ -15,10 +17,10 @@
    overflow: hidden;
 }
 
-.card_inner{
+.card_inner {
    display: flex;
 }
 
 .card .left img {
-   width: 200px;
+   width: 150px;
 }

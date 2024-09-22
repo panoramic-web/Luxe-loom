@@ -1,4 +1,5 @@
 var preloader = document.querySelector('.preloader'),
+   nav = document.querySelector('#navbar'),
    theme_toggler = document.querySelector('#theme-toggler'),
    page = document.body.getAttribute('data-page'),
    theme,
@@ -20,7 +21,7 @@ var preloader = document.querySelector('.preloader'),
    menu = document.querySelector('#menu'),
    nav_links = document.querySelectorAll('#menu .list .item');
 
-      localStorage.setItem('page', page);
+localStorage.setItem('page', page);
 
 function dropdown(btn) {
    btn.parentNode.querySelector('#dropdown-content').classList.toggle('active');
@@ -58,6 +59,20 @@ onload = () => {
    }
    currency_selector.value = localStorage.getItem('curr');
 };
+
+
+
+// Fixed navbar onscroll
+
+onscroll = () => {
+   if (pageYOffset > 0) {
+      nav.classList.add('fixed');
+   }
+   else if (pageYOffset === 0) {
+      nav.classList.remove('fixed');
+   }
+};
+
 
 
 // Site theme

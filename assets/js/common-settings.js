@@ -39,7 +39,7 @@ onload = () => {
 
    setTimeout(() => {
       preloader.style.display = 'none';
-   }, 500);
+   });
 
    // Theme
 

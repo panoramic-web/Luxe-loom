@@ -159,7 +159,6 @@ ul {
    display: grid;
    place-content: center;
    z-index: 1000;
-   display: none;
 }
 
 .preloader .loader h2 {
@@ -175,7 +174,7 @@ ul {
    left: 0;
    width: 100%;
    transition: background .3s;
-   z-index: 100;
+   z-index: 1000;
 
    .top {
       height: 30px;
@@ -190,7 +189,7 @@ ul {
 
    .top .text {
       font-weight: bold;
-      font-family: "Pacifico", cursive;
+      font-family: cursive;
    }
 
    .top .social-links {
@@ -229,13 +228,13 @@ ul {
 
       #product-menu-icon span {
          width: 20px;
-         height: 1.5px;
+         height: 1.3px;
          display: block;
          background: var(--dark);
       }
 
       #product-menu-icon span:first-child {
-         margin-bottom: 7px;
+         margin-bottom: 7.5px;
       }
 
 
@@ -259,12 +258,12 @@ ul {
 
       #menu .list li a {
          font-size: .8rem;
-         font-weight: bold;
          text-transform: uppercase;
       }
 
       #menu .list li.active a {
-         color: #000;
+         color: var(--dark);
+         font-weight: 600;
       }
    }
 
@@ -276,7 +275,7 @@ ul {
       .logo {
          font-size: 1.2rem;
          font-weight: bold;
-         font-family: "Pacifico", cursive;
+         font-family: cursive;
          color: var(--dark);
       }
    }
@@ -299,6 +298,7 @@ ul {
          padding: 2px 5px;
          letter-spacing: 1px;
          font-weight: 600;
+         font-family: cursive;
       }
 
       hr {
@@ -489,8 +489,7 @@ ul {
       width: 40px;
    }
 
-   .features-info p {
-   }
+   .features-info p {}
 }
 
 

@@ -48,13 +48,14 @@
       margin-bottom: 1rem;
       text-transform: capitalize;
       color: var(--dark);
-      font-family: "Pacifico", cursive;
+      font-family: cursive;
    }
 
    .carousel .swiper-slide .info p {
       max-width: 350px;
       margin-bottom: 1.5rem;
       color: var(--dark);
+      font-family: cursive;
    }
 
    .carousel .swiper-slide .info a {
@@ -65,19 +66,52 @@
       border-radius: 50px;
       background: var(--dark);
    }
-}
 
-@media only screen and (max-width: 600px) {
-   .carousel .swiper-slide .info {
+
+
+
+   .shop_btn {
+      position: absolute;
+      z-index: 100;
+
+      font-family: cursive;
+
       text-align: center;
+      color: var(--dark);
+      border: 1px solid var(--dark);
+      padding: 10px 20px;
+      border-radius: 50px;
+      background: var(--light);
    }
 
-   .carousel .swiper-slide .info p {
-      margin: auto;
-      margin-bottom: 1.5rem;
-      max-width: max-content;
+   @media only screen and (min-width: 600px) {
+      .shop_btn {
+         top: 50%;
+         right: 20%;
+         transform: translateY(-50%);
+      }
+   }
+
+   @media only screen and (max-width: 600px) {
+      .shop_btn {
+         bottom: 10%;
+         left: 50%;
+         transform: translateX(-50%);
+      }
+
+      .carousel .swiper-slide .info {
+         text-align: center;
+      }
+
+      .carousel .swiper-slide .info p {
+         margin: auto;
+         margin-bottom: 1.5rem;
+         max-width: max-content;
+      }
    }
 }
+
+
 
 
 
@@ -96,6 +130,7 @@
    display: block;
    text-align: center;
    margin-bottom: 30px;
+   font-family: cursive;
 }
 
 #main .seasonal-offers-slider {
@@ -189,6 +224,7 @@ display: grid;
    display: block;
    text-align: center;
    margin-bottom: 30px;
+   font-family: cursive;
 }
 
 #main .seasonal-offers-slider {
@@ -298,6 +334,7 @@ display: grid;
    width: max-content;
    color: var(--dark);
    margin-bottom: 30px;
+   font-family: cursive;
 }
 
 #services .left .info {

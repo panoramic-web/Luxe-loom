@@ -88,6 +88,7 @@
       padding: 10px 20px;
       border-radius: 50px;
       background: var(--light);
+      z-index: 2;
    }
 
    @media only screen and (min-width: 600px) {

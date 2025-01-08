@@ -1,0 +1,16 @@
+:root {
+   --primary: #003459;
+   --secondary: #2497DC;
+   --light: #000;
+   --dark: red;
+   --grey: red;
+}
+
+#shop .products .grid .card:hover,
+#shop .products .list .card:hover {
+   box-shadow: -2px -2px 3px #000;
+}
+
+#navbar {
+   box-shadow: none;
+}

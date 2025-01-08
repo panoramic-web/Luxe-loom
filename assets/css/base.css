@@ -1,0 +1,53 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+    line-height: 1.5;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+ }
+
+ body {
+    font-size: 1rem;
+    /* 1rem = 16px by default */
+ }
+
+ html {
+    font-size: 16px;
+    /* You can change this base size */
+ }
+
+
+
+
+
+ body {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    /* padding-top: 55px; */
+ }
+
+ /* @media only screen and (max-width: 600px) {
+   :root {
+      font-size: 16px;
+   }
+} */
+
+ a,
+ button,
+ input,
+ select {
+    color: var(--dark);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+ }
+
+ ul {
+    list-style: none;
+ }

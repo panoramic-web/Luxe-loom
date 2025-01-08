@@ -1,0 +1,27 @@
+/* Makes the font size of root element to 10px (62.5% of 16px = 10px) */
+:root {
+   --primary: #003459;
+   --secondary: #007EA7;
+   --light: #fff;
+   --dark: #000;
+   --grey: #ddd;
+}
+
+.dark-theme {
+   --primary: #003459;
+   --secondary: #2497DC;
+   --light: #000;
+   --dark: #fff;
+}
+
+/*
+:root {
+   width: 100%;
+   font-size: 16px;
+   --primary: #003459;
+   --secondary: #007EA7;
+   --light: #fff;
+   --dark: #000;
+   --grey: #ddd;
+}
+*/

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="">
+   <title>Urban Aura | Store</title>
+   <link rel="shortcut icon" type="image/x-icon" href="./icons/logo_dark.svg">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+   <link rel="stylesheet" href="./assets/bootstrap-icons-1.11.2/font/bootstrap-icons.min.css">
+   <link rel="stylesheet" href="./assets/fontawesome-free-6.4.0-web/css/all.min.css">
+   <link rel="stylesheet" href="./assets/css/store.css">
+</head>
+
+<body data-page="store">
+
+   <div class="preloader">
+      <div class="loader">
+         <h2>Urban Aura</h2>
+      </div>
+   </div>
+
+   <nav id="navbar" aria-label="Main navigation">
+      <!-- Top section with contact info and social links -->
+      <div class="navbar-top">
+         <div class="container">
+            <p class="contact-info">Call <a href="tel:+94763486257">+94763486257</a></p>
+
+            <ul class="social-links" aria-label="Social media links">
+               <li><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
+               <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
+               <li><a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a></li>
+               <li><a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a></li>
+            </ul>
+         </div>
+      </div>
+
+      <!-- Bottom section with menu, logo, and cart/currency options -->
+      <div class="navbar-bottom">
+         <div class="container">
+            <!-- Left column: Sidebar menu -->
+            <aside class="navbar-left">
+               <button id="sidebar-toggle" type="button" class="menu-button" aria-label="Toggle menu" aria-expanded="false" aria-controls="sidebar-menu">
+                  <span></span>
+                  <span></span>
+               </button>
+
+               <nav id="menu" class="menu" aria-label="Site navigation">
+                  <ul class="menu-list">
+                     <li class="menu-item active"><a href="./index.html">Home</a></li>
+                     <li class="menu-item"><a href="./store.html">Shop</a></li>
+                     <li class="menu-item"><a href="#">Blog</a></li>
+                     <li class="menu-item"><a href="./about.html">About</a></li>
+                     <li class="menu-item"><a href="#">Contact</a></li>
+                  </ul>
+               </nav>
+            </aside>
+
+            <!-- Center column: Logo -->
+            <div class="navbar-center">
+               <a class="logo" href="./index.html" aria-label="Urban Aura Home">Urban Aura</a>
+            </div>
+
+            <!-- Right column: Currency selector and cart -->
+            <aside class="navbar-right">
+               <label for="currency-toggle" class="visually-hidden">Select currency</label>
+               <select name="currency" id="currency-toggle" class="currency-selector" aria-label="Currency selector">
+                  <option value="LKR" selected>LKR</option>
+                  <option value="USD">USD</option>
+               </select>
+
+               <span class="separator" role="separator"></span>
+
+               <a class="cart-icon" href="#" aria-label="View shopping cart"><i class="bi bi-bag"></i></a>
+            </aside>
+         </div>
+      </div>
+   </nav>
+
+   <main id="main">
+      <aside id="sidebar" class="sidebar">
+         <!-- Sidebar Header -->
+         <div class="sidebar-header">
+            <p class="sidebar-title">Menu</p>
+            <a id="theme-toggler" href="#"><i class="bi bi-moon"></i></a>
+         </div>
+
+         <!-- Sidebar Body -->
+         <div class="sidebar-body">
+
+
+            <!-- Categories Menu -->
+            <section class="menu-section categories-menu">
+               <h5 class="section-title">Shop by Category</h5>
+
+               <!-- Search bar -->
+               <form class="sidebar-search" action="" method="get" accept-charset="utf-8">
+                  <input type="text" class="search-bar" name="search-bar" id="search-bar" placeholder="Search products">
+                  <label for="search-bar"><i class="bi bi-search"></i></label>
+               </form>
+
+               <!-- Clothing Categories -->
+               <div class="menu-dropdown">
+                  <button onclick="toggleDropdown(this)" class="dropdown-toggle"><i class="bi bi-tag"></i> Clothing <i class="bi bi-chevron-compact-right"></i></button>
+                  <div class="dropdown-menu">
+                     <div class="submenu">
+                        <button onclick="toggleDropdown(this)" class="submenu-toggle">Women's Clothing <i class="bi bi-chevron-compact-right"></i></button>
+                        <div class="submenu-items">
+                           <a href="#">T-Shirts</a>
+                           <a href="#">Dresses</a>
+                           <a href="#">Jeans</a>
+                           <a href="#">Tops</a>
+                           <a href="#">Skirts</a>
+                           <a href="#">Shorts</a>
+                           <a href="#">Jackets</a>
+                           <a href="#">Activewear</a>
+                           <a href="#">Lingerie</a>
+                           <a href="#">Sleepwear</a>
+                        </div>
+                     </div>
+
+                     <div class="submenu">
+                        <button onclick="toggleDropdown(this)" class="submenu-toggle">Men's Clothing <i class="bi bi-chevron-compact-right"></i></button>
+                        <div class="submenu-items">
+                           <a href="#">Shirts</a>
+                           <a href="#">T-Shirts</a>
+                           <a href="#">Jeans</a>
+                           <a href="#">Suits</a>
+                           <a href="#">Shorts</a>
+                           <a href="#">Jackets</a>
+                           <a href="#">Activewear</a>
+                        </div>
+                     </div>
+
+                     <div class="submenu">
+                        <button onclick="toggleDropdown(this)" class="submenu-toggle">Kids' Clothing <i class="bi bi-chevron-compact-right"></i></button>
+                        <div class="submenu-items">
+                           <a href="#">Boys' Clothing</a>
+                           <a href="#">Girls' Clothing</a>
+                           <a href="#">Baby Clothes</a>
+                           <a href="#">Kids Shoes</a>
+                           <a href="#">School Uniforms</a>
+                        </div>
+                     </div>
+
+                     <div class="submenu">
+                        <button onclick="toggleDropdown(this)" class="submenu-toggle">Sportswear <i class="bi bi-chevron-compact-right"></i></button>
+                        <div class="submenu-items">
+                           <a href="#">Sportswear</a>
+                           <a href="#">Gym Wear</a>
+                           <a href="#">Yoga Pants</a>
+                           <a href="#">Running Shoes</a>
+                        </div>
+                     </div>
+
+                     <div class="submenu">
+                        <button onclick="toggleDropdown(this)" class="submenu-toggle">Sleepwear & Lingerie <i class="bi bi-chevron-compact-right"></i></button>
+                        <div class="submenu-items">
+                           <a href="#">Pajamas</a>
+                           <a href="#">Lingerie Sets</a>
+                           <a href="#">Nightgowns</a>
+                           <a href="#">Sleep Shorts</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Footwear Categories -->
+               <div class="menu-dropdown">
+                  <button onclick="toggleDropdown(this)" class="dropdown-toggle"><i class="bi bi-person-walking"></i> Footwear <i class="bi bi-chevron-compact-right"></i></button>
+                  <div class="dropdown-menu">
+                     <div class="submenu">
+                        <button onclick="toggleDropdown(this)" class="submenu-toggle">Women's Shoes <i class="bi bi-chevron-compact-right"></i></button>
+                        <div class="submenu-items">
+                           <a href="#">Flats</a>
+                           <a href="#">Heels</a>
+                           <a href="#">Boots</a>
+                           <a href="#">Sneakers</a>
+                           <a href="#">Sandals</a>
+                           <a href="#">Slippers</a>
+                        </div>
+                     </div>
+
+                     <div class="submenu">
+                        <button onclick="toggleDropdown(this)" class="submenu-toggle">Men's Shoes <i class="bi bi-chevron-compact-right"></i></button>
+                        <div class="submenu-items">
+                           <a href="#">Boots</a>
+                           <a href="#">Sneakers</a>
+                           <a href="#">Loafers</a>
+                           <a href="#">Sandals</a>
+                           <a href="#">Formal Shoes</a>
+                        </div>
+                     </div>
+
+                     <div class="submenu">
+                        <button onclick="toggleDropdown(this)" class="submenu-toggle">Kids' Shoes <i class="bi bi-chevron-compact-right"></i></button>
+                        <div class="submenu-items">
+                           <a href="#">Sneakers</a>
+                           <a href="#">Boots</a>
+                           <a href="#">Slippers</a>
+                           <a href="#">Sandals</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Electronics Categories -->
+               <div class="menu-dropdown">
+                  <button onclick="toggleDropdown(this)" class="dropdown-toggle"><i class="bi bi-laptop"></i> Electronics <i class="bi bi-chevron-compact-right"></i></button>
+                  <div class="dropdown-menu">
+                     <div class="submenu">
+                        <button onclick="toggleDropdown(this)" class="submenu-toggle">Smartphones & Accessories <i class="bi bi-chevron-compact-right"></i></button>
+                        <div class="submenu-items">
+                           <a href="#">Smartphones</a>
+                           <a href="#">Phone Cases</a>
+                           <a href="#">Chargers</a>
+                           <a href="#">Screen Protectors</a>
+                        </div>
+                     </div>
+
+                     <div class="submenu">
+                        <button onclick="toggleDropdown(this)" class="submenu-toggle">Laptops & Computers <i class="bi bi-chevron-compact-right"></i></button>
+                        <div class="submenu-items">
+                           <a href="#">Laptops</a>
+                           <a href="#">Monitors</a>
+                           <a href="#">Keyboards</a>
+                           <a href="#">Headphones</a>
+                        </div>
+                     </div>
+
+                     <div class="submenu">
+                        <button onclick="toggleDropdown(this)" class="submenu-toggle">Home Appliances <i class="bi bi-chevron-compact-right"></i></button>
+                        <div class="submenu-items">
+                           <a href="#">Refrigerators</a>
+                           <a href="#">Washing Machines</a>
+                           <a href="#">Air Conditioners</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Home & Living Categories -->
+               <div class="menu-dropdown">
+                  <button onclick="toggleDropdown(this)" class="dropdown-toggle"><i class="bi bi-house-door"></i> Home & Living <i class="bi bi-chevron-compact-right"></i></button>
+                  <div class="dropdown-menu">
+                     <div class="submenu">
+                        <button onclick="toggleDropdown(this)" class="submenu-toggle">Furniture <i class="bi bi-chevron-compact-right"></i></button>
+                        <div class="submenu-items">
+                           <a href="#">Sofas</a>
+                           <a href="#">Chairs</a>
+                           <a href="#">Beds</a>
+                           <a href="#">Tables</a>
+                        </div>
+                     </div>
+
+                     <div class="submenu">
+                        <button onclick="toggleDropdown(this)" class="submenu-toggle">Kitchen & Dining <i class="bi bi-chevron-compact-right"></i></button>
+                        <div class="submenu-items">
+                           <a href="#">Cookware</a>
+                           <a href="#">Dinnerware</a>
+                           <a href="#">Storage</a>
+                           <a href="#">Drinkware</a>
+                        </div>
+                     </div>
+
+                     <div class="submenu">
+                        <button onclick="toggleDropdown(this)" class="submenu-toggle">Bedding & Linens <i class="bi bi-chevron-compact-right"></i></button>
+                        <div class="submenu-items">
+                           <a href="#">Bed Sheets</a>
+                           <a href="#">Comforters</a>
+                           <a href="#">Pillows</a>
+                           <a href="#">Blankets</a>
+                        </div>
+                     </div>
+
+                     <div class="submenu">
+                        <button onclick="toggleDropdown(this)" class="submenu-toggle">Decor <i class="bi bi-chevron-compact-right"></i></button>
+                        <div class="submenu-items">
+                           <a href="#">Rugs</a>
+                           <a href="#">Curtains</a>
+                           <a href="#">Lighting</a>
+                           <a href="#">Mirrors</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Beauty & Personal Care -->
+               <div class="menu-dropdown">
+                  <button onclick="toggleDropdown(this)" class="dropdown-toggle"><i class="bi bi-heart"></i> Beauty & Wellness <i class="bi bi-chevron-compact-right"></i></button>
+                  <div class="dropdown-menu">
+                     <div class="submenu">
+                        <button onclick="toggleDropdown(this)" class="submenu-toggle">Skincare <i class="bi bi-chevron-compact-right"></i></button>
+                        <div class="submenu-items">
+                           <a href="#">Moisturizers</a>
+                           <a href="#">Cleansers</a>
+                           <a href="#">Sunscreens</a>
+                           <a href="#">Masks</a>
+                        </div>
+                     </div>
+
+                     <div class="submenu">
+                        <button onclick="toggleDropdown(this)" class="submenu-toggle">Makeup <i class="bi bi-chevron-compact-right"></i></button>
+                        <div class="submenu-items">
+                           <a href="#">Foundations</a>
+                           <a href="#">Lipsticks</a>
+                           <a href="#">Eye Makeup</a>
+                           <a href="#">Blushes</a>
+                        </div>
+                     </div>
+
+                     <div class="submenu">
+                        <button onclick="toggleDropdown(this)" class="submenu-toggle">Hair Care <i class="bi bi-chevron-compact-right"></i></button>
+                        <div class="submenu-items">
+                           <a href="#">Shampoos</a>
+                           <a href="#">Conditioners</a>
+                           <a href="#">Hair Treatments</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Gifts -->
+               <div class="menu-dropdown">
+                  <button onclick="toggleDropdown(this)" class="dropdown-toggle"><i class="bi bi-gift"></i> Gifts <i class="bi bi-chevron-compact-right"></i></button>
+                  <div class="dropdown-menu">
+                     <div class="submenu">
+                        <button onclick="toggleDropdown(this)" class="submenu-toggle">Gifts for Him <i class="bi bi-chevron-compact-right"></i></button>
+                        <div class="submenu-items">
+                           <a href="#">Tech Gifts</a>
+                           <a href="#">Clothing Gifts</a>
+                           <a href="#">Watches</a>
+                           <a href="#">Personalized Gifts</a>
+                        </div>
+                     </div>
+
+                     <div class="submenu">
+                        <button onclick="toggleDropdown(this)" class="submenu-toggle">Gifts for Her <i class="bi bi-chevron-compact-right"></i></button>
+                        <div class="submenu-items">
+                           <a href="#">Jewelry</a>
+                           <a href="#">Perfumes</a>
+                           <a href="#">Clothing</a>
+                           <a href="#">Home Decor</a>
+                        </div>
+                     </div>
+
+                     <div class="submenu">
+                        <button onclick="toggleDropdown(this)" class="submenu-toggle">Gifts for Kids <i class="bi bi-chevron-compact-right"></i></button>
+                        <div class="submenu-items">
+                           <a href="#">Toys</a>
+                           <a href="#">Books</a>
+                           <a href="#">Clothing</a>
+                           <a href="#">Games</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+
+
+            <!-- Featured Categories -->
+            <section class="menu-section featured-categories">
+               <h5 class="section-title">Featured Categories</h5>
+               <ul>
+                  <li><a href="#"><span>Sale</span>
+                        <hr>
+                     </a></li>
+                  <li><a href="#"><span>New Arrivals</span>
+                        <hr>
+                     </a></li>
+                  <li><a href="#"><span>Best Sellers</span>
+                        <hr>
+                     </a></li>
+                  <li><a href="#"><span>Gift Cards</span>
+                        <hr>
+                     </a></li>
+               </ul>
+            </section>
+
+            <!-- Contact Info & Social Media -->
+            <section class="menu-section contact-info">
+               <h5 class="section-title">Contact Us</h5>
+               <div class="contact-social">
+                  <ul>
+                     <li><a href="#">Instagram <i class="bi bi-instagram"></i></a></li>
+                     <li><a href="#">Facebook <i class="bi bi-facebook"></i></a></li>
+                     <li><a href="#">TikTok <i class="bi bi-tiktok"></i></a></li>
+                     <li><a href="#">Pinterest <i class="bi bi-pinterest"></i></a></li>
+                  </ul>
+               </div>
+            </section>
+         </div>
+      </aside>
+
+      <section id="shop">
+         <div class="shop-header">
+            <div class="titlebar">
+               <p class="page-route"><a href="index.html">Home <i class="bi bi-chevron-right"></i></a><a href="#">Shop <i class="bi bi-chevron-right"></i></a><a href="#">Menswear <i class="bi bi-chevron-right"></i></a> <span id="category-name"></span></p>
+            </div>
+
+            <div class="settings">
+               <div class="sort-filter">
+                  <button class="sort-btn" type="button">Sort by newest</button>
+                  <button class="filters-btn" type="button">Filters <i class="bi bi-chevron-down"></i></button>
+
+                  <div id="filter-window" class="filter-window">
+                     <div class="window">
+                        <div class="top">
+                           <i id="filter-window-close" class="bi bi-x"></i>
+                           <form action="" method="get" accept-charset="utf-8">
+                              <h2 class="title">Sort and filter products</h2>
+                              <label for="min_price">Minimum price</label>
+                              <input id="min_price" type="text" placeholder="Minimum price">
+                              <label for="max_price">Maximum price</label>
+                              <input id="max_price" type="text" placeholder="Maximum price">
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="grid-list-buttons">
+                  <button data-style="g3" class="grid-btn g3x3" type="button"><i class="bi bi-grid-3x3-gap"></i></button>
+                  <hr>
+                  <button data-style="g2" class="grid-btn g2x2" type="button"><i class="bi bi-grid"></i></button>
+                  <hr>
+                  <button data-style="list" class="grid-btn list list-button" type="button"><i class="bi bi-list-task"></i></button>
+               </div>
+            </div>
+         </div>
+
+
+         <div id="showcase" class="grid-view"></div>
+
+
+         <div id="pagination">
+            <div class="prev"><i class="bi bi-chevron-left"></i></div>
+            <div class="pages">
+               <span class="page active">1</span>
+               <span class="page">2</span>
+               <span class="page">3</span>
+               <span class="page">4</span>
+               <span class="page">5</span>
+            </div>
+            <div class="next"><i class="bi bi-chevron-right"></i></div>
+         </div>
+      </section>
+   </main>
+
+
+
+   <!-- <footer data-aos="fade-up" id="footer">
+      <div class="content">
+         <div class="mid">
+            <div class="brand_info column column-1">
+               <a class="logo" href="./index.html"><img src="./assets/icons/logo_dark.svg" alt="Logo">uture</a>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci enim facere repellat, quo deserunt debitis inventore veritatis.</p>
+            </div>
+   
+            <div class="column-2">
+               <h3>Navigation</h3>
+               <ul>
+                  <li><a href="./index.html">Home</a></li>
+                  <li><a href="#products">Shop</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#services">Services</a></li>
+               </ul>
+            </div>
+   
+            <div class="column-3">
+               <h3>Our products</h3>
+               <ul>
+                  <li><a href="#">Peace lily</a></li>
+                  <li><a href="#">Snake plant</a></li>
+               </ul>
+            </div>
+   
+            <div class="column-4">
+               <h3>Contact Us</h3>
+               <ul>
+                  <li><a href="#">Contact number</a></li>
+                  <li><a href="#">Future.style.example@gmail.com</a></li>
+               </ul>
+            </div>
+   
+            <div class="column-5">
+               <h3>Connect on</h3>
+               <ul class="social-links">
+                  <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                  <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                  <li><a href="#"><i class="bi bi-youtube"></i></a></li>
+                  <li><a href="#"><i class="bi bi-twitter-x"></i></a></li>
+               </ul>
+            </div>
+         </div>
+   
+         <div class="bottom">
+            <p>© Future 2024. All rights reserved</p>
+            <p>Created by: panoramicweb.com</p>
+   
+            <a class="go_top" href="#"><i class="bi bi-chevron-up"></i></a>
+         </div>
+      </div>
+   </footer> -->
+
+
+
+
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+   <script src="./assets/js/money.js"></script>
+   <script src="./assets/js/money.min.js"></script>
+
+   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+   <script src="https://kit.fontawesome.com/94a745351e.js" crossorigin="anonymous"></script>
+   <script src="./assets/package/swiper-bundle.min.js"></script>
+   <script src="./assets/js/gsap.min.js"></script>
+   <script src="./assets/js/TimelineLite.min.js"></script>
+   <script src="./assets/js/product_list.js"></script>
+   <script src="./assets/js/base.js"></script>
+   <script src="./assets/js/store.js"></script>
+
+</body>
+
+</html>

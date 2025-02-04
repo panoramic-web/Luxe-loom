@@ -1,0 +1,225 @@
+/* Makes the font size of root element to 10px (62.5% of 16px = 10px) */
+
+/* Light Theme */
+:root {
+   --primary-text: #333333;
+   --headline-text: #111111;
+   --subheading-text: #555555;
+   --navbar-bg: #FFFFFF;
+   --sidebar-bg: #F5F5F5;
+   --body-bg: #FAFAFA;
+   --button-accent: #FF6F61;
+   --border-color: #E0E0E0;
+   --hover-state: #FF856F;
+}
+
+:root {
+   --h1-size: clamp(2rem, 5vw, 3rem);
+   --h2-size: clamp(1.75rem, 4vw, 2.5rem);
+   --h3-size: clamp(1.5rem, 3.5vw, 2rem);
+   --h4-size: clamp(1.25rem, 3vw, 1.75rem);
+   --h5-size: clamp(1rem, 2.5vw, 1.5rem);
+   --h6-size: clamp(0.875rem, 2vw, 1.25rem);
+}
+
+.text-h1 {
+   font-size: var(--h1-size);
+}
+
+.text-h2 {
+   font-size: var(--h2-size);
+}
+
+.text-h3 {
+   font-size: var(--h3-size);
+}
+
+.text-h4 {
+   font-size: var(--h4-size);
+}
+
+.text-h5 {
+   font-size: var(--h5-size);
+}
+
+.text-h6 {
+   font-size: var(--h6-size);
+}
+
+
+/* Dark Theme */
+/*[data-theme="dark"]*/
+.dark-theme {
+   --primary-text: #EDEDED;
+   --headline-text: #FFFFFF;
+   --subheading-text: #9B59B6;
+   --navbar-bg: #1A1A1A;
+   --sidebar-bg: #242424;
+   --body-bg: #181818;
+   --button-accent: #FF5733;
+   --border-color: #333333;
+   --hover-state: #FF7050;
+}
+
+
+
+
+
+/*
+:root {
+   width: 100%;
+   font-size: 16px;
+   --primary: #003459;
+   --secondary: #007EA7;
+   --light: #fff;
+   --dark: #000;
+   --grey: #ddd;
+}
+*/
+
+
+
+
+/*
+body {
+   color: var(--primary-text);
+   background-color: var(--body-bg);
+}
+
+h1,
+h2,
+h3 {
+   color: var(--headline-text);
+}
+
+small,
+.subheading {
+   color: var(--subheading-text);
+}
+
+button {
+   color: var(--button-text-color);
+   background-color: var(--button-accent);
+}
+
+.alert {
+   color: var(--error-color);
+}
+*/
+
+
+
+
+
+
+
+
+/*
+The best darkest color for a website's dark theme depends on the aesthetic you're going for, but here are a few commonly recommended shades with hex codes:
+
+1. True Black (#000000):
+
+Pros: Provides maximum contrast with brighter elements.
+
+Cons: Can be too harsh and strain the eyes for prolonged reading.
+
+
+
+2. Off-Black/Dark Gray (#121212):
+
+Pros: Popular for modern dark themes (e.g., Material Design). It’s softer than true black, reducing eye strain.
+
+Cons: Slightly less contrast with brighter elements.
+
+
+
+3. Charcoal (#1A1A1A or #1E1E1E):
+
+Pros: Warmer and less intense, offering a balanced look.
+
+Cons: May look dull if not complemented with vibrant accents.
+
+
+
+4. Blue-Black (#0D1117):
+
+Pros: Adds subtle blue undertones, often used in developer tools like GitHub.
+
+Cons: May not suit all brands or themes.
+
+
+
+5. Deep Navy (#0A0F1F):
+
+Pros: Creates a more unique, cool-toned aesthetic while remaining dark.
+
+Cons: Needs careful pairing with text and accent colors.
+
+
+
+
+Recommendation:
+
+Use #121212 for a balanced, widely-appreciated dark theme. Pair it with contrasting but not overly bright text colors (e.g., #E0E0E0 for text and #BB86FC for highlights). Let me know if you need guidance on complementary palettes!
+
+
+*/
+
+
+/*
+For a fashion store, your dark theme should strike a balance between sophistication, readability, and an elevated aesthetic. Consider these options for the darkest color, tailored to the luxurious and trendy vibe of fashion retail:
+
+Best Dark Colors for a Fashion Store:
+
+1. Rich Charcoal (#1C1C1C):
+
+Why? It gives a sophisticated, neutral backdrop that works well with vibrant product images and gold or pastel accents.
+
+Example: Highlight product names with metallic gold (#D4AF37) or soft white (#F5F5F5) text.
+
+
+
+2. Soft Black (#161616):
+
+Why? Slightly softer than true black but still dramatic. It makes the website feel high-end and minimizes eye strain.
+
+Example: Pair with clean white (#FFFFFF) or muted beige (#F3E9DC) for a modern, minimalistic look.
+
+
+
+3. Deep Espresso (#2A1F1F):
+
+Why? A warm, brown-black tone adds luxury and pairs beautifully with earthy tones, appealing to premium or sustainable fashion brands.
+
+Example: Use with gold or bronze accents to amplify elegance.
+
+
+
+4. Blue-Black (#101820):
+
+Why? A cool, dark tone with navy undertones feels modern and edgy, perfect for urban or avant-garde fashion stores.
+
+Example: Accent with icy gray (#BCC4CC) or bold primary colors like red (#FF4D4D).
+
+
+
+5. Graphite Gray (#1E2022):
+
+Why? A dark neutral with a hint of gray, offering a sleek, contemporary backdrop that highlights clothing photography.
+
+Example: Pair with minimal pops of muted colors, such as rose gold (#B76E79) or emerald green (#50C878).
+
+
+
+
+
+---
+
+Recommendation for Your Store:
+
+Rich Charcoal (#1C1C1C) is an excellent choice for a fashion store as it’s neutral and elegant, allowing your products to take center stage. Use accent colors (gold, pastel pink, or muted beige) to create a luxurious and stylish experience.
+
+Would you like suggestions for matching typography or accent colors?
+
+
+*/

@@ -1,0 +1,26 @@
+@import url('./variables.css');
+@import url('./base.css');
+@import url('./typography.css');
+/* @import url('./layout.css'); */
+@import url('./navbar.css');
+@import url('./sidebar.css');
+@import url('./preloader.css');
+@import url('./responsive.css');
+
+
+@import url('./footer.css');
+
+
+body {
+   font-family: 'Arial', sans-serif;
+   line-height: 1.6;
+}
+
+.container {
+   padding: 20px;
+   margin-top: 83px;
+}
+
+.container .title {
+   margin-bottom: 20px;
+}

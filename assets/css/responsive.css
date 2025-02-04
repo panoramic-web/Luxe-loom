@@ -1,0 +1,18 @@
+@media only screen and (max-width: 700px) {
+   #navbar #menu {
+      display: block;
+      position: fixed;
+      width: 60%;
+      height: 100vh;
+      /*overflow-y: scroll;*/
+      top: 0;
+      right: -100%;
+      background: var(--light);
+      transition: .3s;
+      z-index: 200;
+   }
+
+   #navbar #menu.active {
+      right: 0;
+   }
+}
